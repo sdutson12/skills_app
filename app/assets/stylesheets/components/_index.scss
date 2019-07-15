@@ -2,3 +2,21 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "footer";
+@import "card_landscape";
+@import "container";
+@import "star_rating";
+@import "card_portrait";
+@import "card_profile";
+
+
+.text-bottom-center{
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+.text-right{
+  bottom: 10px;
+  text-align: right;
+}
