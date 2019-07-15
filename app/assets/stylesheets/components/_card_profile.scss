@@ -11,7 +11,7 @@
   height: 100%;
   width: 200px;
   object-fit: cover;
-  background-position: center;
+  object-position: center;
 }
 
 .card-product h2 {
@@ -31,4 +31,3 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
-
