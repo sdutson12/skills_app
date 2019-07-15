@@ -7,6 +7,8 @@ class Skill < ApplicationRecord
   validates :title, uniqueness: true
   validates :description, presence: true
   validates :sport, presence: true
+  validates :sport, inclusion: { in: %w[soccer basketball lacrosse hockey gymnastics climbing swimming golf yoga] }
   validates :price, presence: true
+  validates :price, numericality: { only_integer: true }
   validates :name, presence: true
 end
