@@ -1,0 +1,60 @@
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-size: cover;
+  background-position: center;
+
+  .flip-image {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+
+  input {
+    padding: 2px;
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  h1 {
+    font-size: 59px;
+  }
+}
+
+
+.cta {
+  position: absolute;
+ color: white;
+ text-shadow: 1px 1px black;
+  flex: 0;
+  top: 150px;
+  right: 180px;
+  width: 400px;
+}
+
+.search {
+  position: absolute;
+  background-color: white;
+  width: 360px;
+  border-radius: 5px;
+  top: 150px;
+  left: 130px;
+
+
+}
+
+.form-banner {
+  flex: 1;
+  font-size: 12px;
+  padding: 18px;
+
+}
