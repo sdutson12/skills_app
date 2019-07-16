@@ -9,6 +9,6 @@ class User < ApplicationRecord
   has_many :learned_skills, through: :bookings, source: :skill, dependent: :destroy
   has_many :reviews, through: :bookings, dependent: :destroy
 
-  # validates :first_name, presence: true
-  # validates :last_name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end

@@ -4,11 +4,11 @@ class Skill < ApplicationRecord
   has_many :users, through: :bookings
   has_many :reviews, through: :bookings, dependent: :destroy
 
-  # validates :title, presence: true
-  # validates :title, uniqueness: true
-  # validates :description, presence: true
-  # validates :sport, presence: true
-  # validates :sport, inclusion: { in: %w[soccer basketball lacrosse hockey gymnastics climbing swimming golf yoga] }
-  # validates :price, presence: true
-  # validates :price, numericality: { only_integer: true }
+  validates :title, presence: true
+  validates :title, uniqueness: true
+  validates :description, presence: true
+  validates :sport, presence: true
+  validates :sport, inclusion: { in: %w[soccer basketball lacrosse hockey gymnastics climbing swimming golf yoga] }
+  validates :price, presence: true
+  validates :price, numericality: { only_integer: true }
 end
