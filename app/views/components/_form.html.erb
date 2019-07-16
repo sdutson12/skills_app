@@ -1,6 +1,6 @@
-<%= simple_form_for [@user] do |f| %>
-  <%= f.input :sports %>
-   <%= f.input :location %>
-    <%= f.input :date %>
+<%= form_with url: root_path, local: true, method: :get do |f| %>
+  <%= f.text_field :sports %>
+   <%= f.text_field :location %>
+    <%= f.text_field :date %>
   <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
