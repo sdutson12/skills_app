@@ -317,5 +317,3 @@ Review.create!(
     booking_id: 10
   }
 )
-
-
