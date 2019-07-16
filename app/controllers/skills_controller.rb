@@ -2,7 +2,7 @@ class SkillsController < ApplicationController
   before_action :set_skill, only: %i[show create edit update destroy]
 
   def index
-    @skills = Skill.all
+    @skills = policy_scope(Skill).all
   end
 
   def show
