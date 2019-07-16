@@ -17,7 +17,6 @@
   }
 
   input {
-    padding: 2px;
     font-size: 12px;
   }
   button {
@@ -41,11 +40,6 @@
   width: 400px;
 }
 
-#button-banner {
-  text-shadow: none;
-  color: red;
-  font-weight: bold;
-}
 .search {
   position: absolute;
   background-color: white;

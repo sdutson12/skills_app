@@ -13,29 +13,31 @@
 }
 
 .btn-flat {
-  color: red;
+  color: $red;
   padding: 8px 24px;
   border-radius: 4px;
   background: $pink;
   transition: background 0.3s ease;
+  text-shadow: none;
+  font-weight: bolder;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
+  background: #ffd1c6;
+  color: $red;
+  text-shadow: none;
 }
 
 .btn-gradient {
-  color: red;
+  color: white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background-image: linear-gradient(-90deg, #fa6db3 0%, #fe7577 100%);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: red;
+  background-image: linear-gradient(-90deg, #fa6db3 0%, #fe7577 100%);
+  color: white;
 }
