@@ -11,7 +11,7 @@ User.create!(
   {
   first_name: 'Alberta',
   last_name: 'Lowe',
-  password: 12345,
+  password: 123456754,
   email: 'alberta@mail.com',
   photo: 'https://avatars0.githubusercontent.com/u/50481949?v=4'
   }
@@ -239,7 +239,7 @@ Booking.create!(
 
 Review.create!(
   {
-    title: 'Best instructor ever!',
+    title: 'Best instructor ever !',
     content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
     stars: 5,
     booking_id: 1
@@ -247,72 +247,72 @@ Review.create!(
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Bestest instructor ever ever!',
+    content: 'Can\'t believe how much better I am after just one session! Very much recommend!',
     stars: 4,
     booking_id: 2
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Best best instructor ever!',
+    content: 'Can\'t believe how much better I am after just one session! I definitely recommend!',
     stars: 5,
     booking_id: 3
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Most amazing instructor ever!',
+    content: 'Can\'t believe how much better I am after just one session! I recommend!',
     stars: 4,
     booking_id: 4
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Wonderful instructor!',
+    content: 'Can\'t believe how much better I am after just one session! Most def recommend!',
     stars: 5,
     booking_id: 5
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Great teacher!',
+    content: 'Can\'t believe how much better I am after just one session!',
     stars: 4,
     booking_id: 6
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Best teacher ever!',
+    content: 'Can\'t believe how much better I am after just one session!!!!',
     stars: 5,
     booking_id: 7
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Best maestro ever!',
+    content: 'Can\'t believe how much better I am after just one session! Highly recommend!!!',
     stars: 4,
     booking_id: 8
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Awesome teacher!',
+    content: 'Can\'t believe how much better I am after just one session! Highly recommend!!!!!!',
     stars: 5,
     booking_id: 9
   }
 )
 Review.create!(
   {
-    title: 'Best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+    title: 'Best teacher I have ever had!',
+    content: 'Can\'t believe how much better I am after just one session! You should definitely take a lesson!!!!',
     stars: 4,
     booking_id: 10
   }
