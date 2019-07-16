@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def create
@@ -16,6 +17,7 @@ class BookingsController < ApplicationController
     else
       render "skills/show"
     end
+    authorize @booking
   end
 
   private
