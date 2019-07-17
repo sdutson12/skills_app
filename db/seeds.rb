@@ -117,7 +117,7 @@ SKILLS = [ {
   {
     title: 'Climbing lessons',
     description: 'Hey there! I\'ve been climbing for a few years, and I\'ve really fallen in love with the sport. I would love to share my passion for climbing with you!',
-    sport: 'climbing',
+    sport: 'rock climbing',
     price: 70,
     location: 'Denver',
     photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1386&q=80'
@@ -186,54 +186,105 @@ BOOKINGS = [ {
 
 REVIEWS = [ {
   title: 'Best instructor ever!',
-  content: 'Can\'t believe how much better I am after just one session! Highly recommend!',
+  content: 'I learned so much in my lesson, and I had a lot of fun as well! Can\'t believe how much better I am after such a short amount of time! I highly recommend this class!',
   stars: 5,
   },
   {
-    title: 'Bestest instructor ever ever!',
-    content: 'Can\'t believe how much better I am after just one session! Very much recommend!',
+    title: 'Had lots of fun!',
+    content: 'This was the most fun I have had in a long time. I generally don\'t like working out, so I was a little bit worried about this lesson, but the time just flew by. I definitely recommend this class. Loads of fun!',
     stars: 4,
   },
   {
-    title: 'Best best instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! I definitely recommend!',
+    title: 'Great instructor, great class',
+    content: 'This was my first time using this website to find an instructor, and I\'m really pleased with the entire experience. My instructor was really professional and knowledgeable and was a lot of fun as well. I\'m already looking forward to the next class!',
     stars: 5,
   },
   {
-    title: 'Most amazing instructor ever!',
-    content: 'Can\'t believe how much better I am after just one session! I recommend!',
+    title: 'Highly recommend this instructor',
+    content: 'Learned so so much in just one session! I highly recommend!',
     stars: 4,
   },
   {
     title: 'Wonderful instructor!',
-    content: 'Can\'t believe how much better I am after just one session! Most def recommend!',
+    content: 'This instructor is the best!!! So knowledgeable and funny as well. I just had so much fun, and I can\'t wait for the next lesson. Be sure to arrive early and warm-up so that you have more fun to focus on content during the class. Highly highly recommend.',
     stars: 5,
   },
   {
-    title: 'Great teacher!',
-    content: 'Can\'t believe how much better I am after just one session!',
-    stars: 4,
+    title: 'Was a pretty good experience',
+    content: 'I mostly enjoyed my lesson, but some things could have been better. The instructor arrived right on time even though I arrived 10 minutes early, and did not give me enough chance to warm-up. But the instructor was very knowledgeable and kind and I enjoyed the lesson overall. That\'s why I gave 3 stars.',
+    stars: 3,
   },
   {
-    title: 'Best teacher ever!',
-    content: 'Can\'t believe how much better I am after just one session!!!!',
+    title: 'Awesome time!',
+    content: 'Loved, loved, loved this class. Already booked another class with the instructor next week. Be sure to book early because a lot of reservation slots are taken quickly',
     stars: 5,
     booking_id: 7
   },
   {
-    title: 'Best maestro ever!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!!!',
-    stars: 4,
-  },
-  {
-    title: 'Awesome teacher!',
-    content: 'Can\'t believe how much better I am after just one session! Highly recommend!!!!!!',
+    title: 'Una clase maravilloso',
+    content: 'Aprendí mucho en mi lección, y también me divertí mucho! ¡No puedo creer lo mucho mejor que estoy después de tan poco tiempo! Recomiendo esta clase!',
     stars: 5,
   },
   {
-    title: 'Best teacher I have ever had!',
-    content: 'Can\'t believe how much better I am after just one session! You should definitely take a lesson!!!!',
+    title: 'Una experiencia hermosa ',
+    content: 'Esto fue lo más divertido que he tenido en mucho tiempo. Generalmente no me gusta hacer ejercicio, así que estaba un poco preocupado por esta lección, pero el tiempo pasó volando. Definitivamente recomiendo esta clase. Montones de diversión!',
+    stars: 5,
+  },
+  {
+    title: 'Lo mejor instructor que he tuve!',
+    content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable.',
+    stars: 5,
+  },
+  {
+    title: 'Best instructor ever!!',
+    content: 'I learned so much in my lesson, and I had a lot of fun as well! Can\'t believe how much better I am after such a short amount of time! I highly recommend this class!!',
+    stars: 5,
+  },
+  {
+    title: 'Had lots of fun!!',
+    content: 'This was the most fun I have had in a long time. I generally don\'t like working out, so I was a little bit worried about this lesson, but the time just flew by. I definitely recommend this class. Loads of fun!!',
     stars: 4,
+  },
+  {
+    title: 'Great instructor, great class!',
+    content: 'This was my first time using this website to find an instructor, and I\'m really pleased with the entire experience. My instructor was really professional and knowledgeable and was a lot of fun as well. I\'m already looking forward to the next class!!',
+    stars: 5,
+  },
+  {
+    title: 'Highly recommend this instructor!',
+    content: 'Learned so so much in just one session! I highly recommend!!',
+    stars: 4,
+  },
+  {
+    title: 'Wonderful instructor!!',
+    content: 'This instructor is the best!!! So knowledgeable and funny as well. I just had so much fun, and I can\'t wait for the next lesson. Be sure to arrive early and warm-up so that you have more fun to focus on content during the class. Highly highly recommend!',
+    stars: 5,
+  },
+  {
+    title: 'Was a pretty good experience!',
+    content: 'I mostly enjoyed my lesson, but some things could have been better. The instructor arrived right on time even though I arrived 10 minutes early, and did not give me enough chance to warm-up. But the instructor was very knowledgeable and kind and I enjoyed the lesson overall. That\'s why I gave 3 stars!',
+    stars: 3,
+  },
+  {
+    title: 'Awesome time!!',
+    content: 'Loved, loved, loved this class. Already booked another class with the instructor next week. Be sure to book early because a lot of reservation slots are taken quickly!',
+    stars: 5,
+    booking_id: 7
+  },
+  {
+    title: 'Una clase maravilloso!',
+    content: 'Aprendí mucho en mi lección, y también me divertí mucho! ¡No puedo creer lo mucho mejor que estoy después de tan poco tiempo! Recomiendo esta clase!!',
+    stars: 5,
+  },
+  {
+    title: 'Una experiencia hermosa!',
+    content: 'Esto fue lo más divertido que he tenido en mucho tiempo. Generalmente no me gusta hacer ejercicio, así que estaba un poco preocupado por esta lección, pero el tiempo pasó volando. Definitivamente recomiendo esta clase. Montones de diversión!!',
+    stars: 5,
+  },
+  {
+    title: 'Lo mejor instructor que he tuve!!',
+    content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable!',
+    stars: 5,
   }
 ]
 
@@ -296,8 +347,6 @@ REVIEWS.each do |review|
 end
 
 puts "Finished seeding process..."
-
-
 
 
 # url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
