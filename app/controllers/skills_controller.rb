@@ -7,6 +7,7 @@ class SkillsController < ApplicationController
   end
 
   def show
+    authorize @skill
   end
 
   def new
