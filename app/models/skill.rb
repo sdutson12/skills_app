@@ -16,9 +16,11 @@ class Skill < ApplicationRecord
   validates :price, presence: true
   validates :price, numericality: { only_integer: true }
 
-  def rating
-    return "Not reviewed yet." if !reviews.count.positive?
-
-    self.reviews.reduce(0) { |a, r| a + r.stars } / self.reviews.count.to_f
+  def average_stars
+    if self.reviews.size > 0
+      self.reviews.average(:stars).to_i
+    else
+      0
+    end
   end
 end

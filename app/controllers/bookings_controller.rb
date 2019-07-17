@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @bookings = policy_scope(Booking)
@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.skill = @skill
     @booking.user = current_user
+    @booking.status = 'Pending'
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -26,6 +27,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status, :date, :num_of_hours, :skill_id, :user_id)
+    params.require(:booking).permit(:date, :num_of_hours)
   end
 end

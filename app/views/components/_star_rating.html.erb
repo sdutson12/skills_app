@@ -1,8 +1,8 @@
-<% if skill.rating.is_a?(String) %>
-  <span><%= skill.rating %></span>
-<% else %>
-  <% 5.times do |i| %>
-    <i class="fa fa-star <%= skill.rating >= (i + 1) ? 'checked' : 'unchecked' %>"></i>
+<% if defined?(stars) %>
+  <% stars.times do %>
+    <span class="fa fa-star checked"></span>
+  <% end %>
+  <% (5 - stars).times do %>
+    <span class="fa fa-star unchecked"></span>
   <% end %>
 <% end %>
-

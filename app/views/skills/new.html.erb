@@ -1,1 +1,21 @@
-new.html.erb
+<div class="margin">
+  <div class="container new-skill-wrapper">
+    <div id="skill-form">
+      <h1 id="header" class="text-left">Add a New Skill</h1>
+      <div>
+        <%= simple_form_for @skill do |f| %>
+        <%= f.input :title, class:"form-control", placeholder: 'Violin lessons from a professional musician...' %>
+        <%= f.input :description, placeholder: 'Tell us about your lessons', class:"form-control description" %>
+        <%= f.input :sport, collection: Skill::SPORTS, placeholder: 'Upload a descriptive image', label:'Skill' %>
+        <%= f.input :price, placeholder: 'Choose an hourly rate', class:"form-control" %>
+        <%= f.input :photo, class:"form-control btn btn-primary" %>
+        <%= f.input :photo_cache, as: :hidden, class:"form-control" %>
+        <%= f.button :submit, class:"btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="skill-image" style="background-image: url(https://images.unsplash.com/photo-1521115507110-6a627e5ce14e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+    </div>
+  </div>
+</div>
