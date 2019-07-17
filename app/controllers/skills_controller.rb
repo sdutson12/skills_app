@@ -1,8 +1,9 @@
 class SkillsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: [:index]
   before_action :set_skill, only: %i[show create edit update destroy]
 
   def index
-    @skills = Skill.all
+    @skills = policy_scope(Skill).all
   end
 
   def show
@@ -10,6 +11,7 @@ class SkillsController < ApplicationController
 
   def new
     @skill = Skill.new
+    authorize @skill
   end
 
   def create
@@ -40,7 +42,8 @@ class SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skill).permit(:title, :description, :sport, :price)
+    params.require(:skill).permit(:title, :description, :sport, :price, :location)
+    authorize @skill
   end
 
   def set_skill
