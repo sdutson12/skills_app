@@ -1,52 +1,81 @@
 <!-- Skill.new, you can do , but to access @skill, you need @booking.skill -->
 
-<div class="container">
+<div class="container-small">
+  <div class="booking-confirmation-card">
 
-<h3>Congratulations! You have sent a booking request to <%= @skill.user.first_name %> </h3>
+    <div class="booking-confirmation-header">
+      <h3>Your reservation details</h3>
+      <img class = "booking-confirmation-image" src="<%= @booking.skill.photo %>" alt="lesson photo">
+    </div>
+    <div class="booking-status-card">
+      <% if @booking.status == 'confirmed' %>
+        <h5 class="mt-4 mb-3 text-center">Your booking has been <%= @booking.status %></h5>
+      <% elsif @booking.status == 'accepted' %>
+        <h5 class="mt-4 mb-3 text-center">Your booking has been <%= @booking.status %></h5>
+      <% elsif @booking.status == 'pending' %>
+        <h5 class="mt-4 mb-3 text-center">Your booking is <%= @booking.status %></h5>
+      <% end %>
+    </div>
+    <div class="booking-info pt-4">
+      <div class="booking-details d-flex">
+        <i class="far fa-calendar-alt mr-3"></i>
+        <p>Date: <%= @booking.date %> </p>
+      </div>
+      <div class="booking-details d-flex">
+        <i class="far fa-clock mr-3"></i>
+        <p>Number of Hours: <%= @booking.num_of_hours %></p>
+      </div>
+      <div class="booking-details d-flex">
+        <i class="fas fa-dollar-sign mr-4"></i>
+        <p>Price: $<%= @booking.skill.price * @booking.num_of_hours %></p>
+      </div>
+    </div>
 
-<div class="booking-info">
-  <h5>Your Booking is <%= @booking.status %></h5>
-  <div class="booking-details">
-    <i class="far fa-calendar-alt"></i>
-    <p>Date: @booking.date</p>
+    <div class="booking-instructions d-flex mt-4 align-items-center">
+      <div class="booking-instructions-image">
+        <img src="<%= asset_path('undraw_reminder_pa79.png') %>" width=100px alt="Reminders">
+      </div>
+      <div class="booking-instructions-reminder">
+        <h6><em>Reminders: </em></h6>
+        <ul>
+          <li>Arrive to your lesson 10 minutes before the lesson begins</li>
+          <li>You will receive a reminder email 24 hours before the lesson. Please confirm!</li>
+          <li>Dress comfortably!</li>
+          <li>Stay hydrated! Please bring a water bottle to your lesson</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="booking-instructions mt-3 d-flex pb-3 align-items-center">
+      <div class="booking-instructions-image">
+        <img src="<%= asset_path('undraw_cancel_u1it.png') %>" width=100px alt="Cancellation">
+      </div>
+      <div class="booking-instructions-cancel">
+        <h6><em>Cancellation Policy</em></h6>
+        <ul>
+          <li>If you cancel with less than 24 hours notice, you must pay 100% of the fee.</li>
+          <li>If you cancel between 24 hours and 48 hours, you will receive a 50% refund</li>
+          <li>If you give more than 48 hours notice, you will receive a full refund. </li>
+        </ul>
+      </div>
   </div>
-  <div class="booking-details">
-    <i class="far fa-clock"></i>
-    <p>Number of Hours: @booking.num_of_hours</p>
   </div>
-  <div class="booking-details">
-    <i class="fas fa-dollar-sign"></i>
-    <p>Price: @booking.price</p>
+  <div class="back-to-bookings">
+    <%= link_to bookings_path do %>
+      <input type="submit" value="All My Bookings" class="btn btn-gradient" style="width: 100%">
+    <% end %>
   </div>
 </div>
 
-<div class="booking-instructions">
-  <div class="booking-instructions-image">
-    <img src="../../../app/assets/images/undraw_reminder_pa79.png" alt="Reminders">
-  </div>
-  <div class="booking-instructions-info">
-    <h6>Reminders: </h6>
-    <ul>
-      <li>Arrive to your lesson 10 minutes before the lesson begins</li>
-      <li>You will receive a reminder email 24 hours before the lesson. Please confirm!</li>
-      <li>Dress comfortably!</li>
-      <li>Stay hydrated! Please bring a water bottle to your lesson</li>
-    </ul>
-  </div>
-</div>
 
-<div class="booking-instructions">
-  <div class="booking-instructions-image">
-    <img src="../../../app/assets/images/undraw_cancel_u1it.png" alt="Cancellation">
-  </div>
-  <div class="booking-instructions-info">
-    <h6>Cancellation Policy</h6>
-    <ul>
-      <li>If you cancel with less than 24 hours notice, you must pay 100% of the fee.</li>
-      <li>If you cancel between 24 hours and 48 hours, you will receive a 50% refund</li>
-      <li>If you give more than 48 hours notice, you will receive a full refund. </li>
-    </ul>
-  </div>
-</div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
