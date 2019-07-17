@@ -13,9 +13,11 @@ class BookingsController < ApplicationController
   def create
     @skill = Skill.find(params[:skill_id])
     @booking = Booking.new(booking_params)
-    @skill = @booking.skill
+    @booking.skill = @skill
+    @booking.user = current_user
+    @booking.status = 'Pending'
     if @booking.save
-      redirect_to skill_path(@skill)
+      redirect_to booking_path(@booking)
     else
       render "skills/show"
     end
@@ -25,6 +27,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status, :date, :num_of_hours, :skill_id, :user_id)
+    params.require(:booking).permit(:date, :num_of_hours)
   end
 end
