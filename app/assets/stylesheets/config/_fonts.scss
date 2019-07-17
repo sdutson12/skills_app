@@ -1,6 +1,6 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url("https://fonts.googleapis.com/css?family=Karla|Montserrat:300&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Asap&display=swap");
 
 // Define fonts for body and headers
@@ -18,3 +18,31 @@ $headers-font: "Karla", sans-serif;
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+$dark-blue: #1D2A7A;
+$pink: #F2B5A6;
+$red: #7F1008;
+$dark-gray: #474747;
+
+// a {
+//   color: $dark-gray;
+// }
+
+// p {
+//   color: $dark-gray;
+// }
+
+// h1 {
+//   color: $dark-gray;
+// }
+
+// h2 {
+//   color: $dark-gray;
+// }
+
+// h3 {
+//   color: $dark-gray;
+// }
+
+// h4 {
+//   color: $dark-gray;
+// }
