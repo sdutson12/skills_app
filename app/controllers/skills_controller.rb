@@ -3,6 +3,7 @@ class SkillsController < ApplicationController
 
   def index
     @skills = Skill.all
+    @skill = Skill.new
   end
 
   def show
@@ -40,7 +41,7 @@ class SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skill).permit(:title, :description, :sport, :price)
+    params.require(:skill).permit(:title, :description, :sport, :price, :photo)
   end
 
   def set_skill

@@ -1,0 +1,12 @@
+<h1>Add a new Skill</h1>
+<div class="container">
+<%= simple_form_for @skill do |f| %>
+  <%= f.input :title, error: 'Title is mandatory, please specify one', class:class="form-control" %>
+  <%= f.input :description, placeholder: 'Tell us about your lessons' %>
+  <%= f.input :sport, placeholder: 'Upload a descriptive image' %>
+  <%= f.input :price, placeholder: 'Choose an hourly rate' %>
+    <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.button :submit, class:"btn btn-primary" %>
+<% end %>
+</div>
