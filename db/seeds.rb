@@ -303,7 +303,7 @@ puts ""
 puts "Creating Learners"
 LEARNERS.each do |learner|
   seed_learner = User.new(learner)
-  # seed_learner.remote_photo_url = learner[:photo]
+  seed_learner.remote_photo_url = learner[:photo]
   seed_learner.save!
   puts " - created #{seed_learner.first_name}"
 end
@@ -312,7 +312,7 @@ puts ""
 puts "Creating Instructors"
 INSTRUCTORS.each do |instructor|
   seed_instructor = User.new(instructor)
-  # seed_instructor.remote_photo_url = instructor[:photo]
+  seed_instructor.remote_photo_url = instructor[:photo]
   seed_instructor.save!
   puts " - created #{seed_instructor.first_name}"
 end
@@ -322,7 +322,7 @@ puts "Creating Skills"
 SKILLS.each do |skill|
   seed_skill = Skill.new(skill)
   seed_skill.user = User.last(INSTRUCTORS.length).sample
-  # seed_skill.remote_photo_url = skill[:photo]
+  seed_skill.remote_photo_url = skill[:photo]
   seed_skill.save!
   puts " - created #{seed_skill.title}"
 end
