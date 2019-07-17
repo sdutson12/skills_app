@@ -1,5 +1,4 @@
 .banner {
-  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -29,19 +28,15 @@
   }
 }
 
-
 .cta {
-  position: absolute;
- color: white;
- text-shadow: 1px 1px black;
-  flex: 0;
+  color: white;
+  text-shadow: 1px 1px black;
   top: 150px;
   right: 180px;
-  width: 400px;
+  width: 500px;
 }
 
 .search {
-  position: absolute;
   background-color: white;
   width: 360px;
   border-radius: 5px;
