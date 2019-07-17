@@ -14,4 +14,12 @@ class Skill < ApplicationRecord
   validates :sport, inclusion: { in: SPORTS }
   validates :price, presence: true
   validates :price, numericality: { only_integer: true }
+
+  def average_stars
+    if self.reviews.size > 0
+      self.reviews.average(:stars).to_i
+    else
+      0
+    end
+  end
 end
