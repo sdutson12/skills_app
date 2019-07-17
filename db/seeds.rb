@@ -35,14 +35,7 @@ LEARNERS = [ {
   email: 'sole@mail.com',
   photo: 'https://avatars0.githubusercontent.com/u/48864600?v=4'
   },
-  {
-  first_name: 'Alberta',
-  last_name: 'Lowe',
-  password: 123456754,
-  email: 'alberta@mail.com',
-  photo: 'https://avatars0.githubusercontent.com/u/50481949?v=4'
-  }
-}]
+]
 
 INSTRUCTORS = [  {
   first_name: 'Alberta',
@@ -136,16 +129,13 @@ SKILLS = [ {
     price: 35,
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1438029071396-1e831a7fa6d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2584&q=80'
-    user_id
   }
-}]
+]
 
 BOOKINGS = [ {
     status: 'accepted',
     date: Date.today,
     num_of_hours: 1,
-    user_id
-    skill_id
   },
   {
     status: 'accepted',
@@ -262,7 +252,7 @@ puts ""
 puts "Creating Learners"
 LEARNERS.each do |learner|
   seed_learner = User.new(learner)
-  seed_learner.remote_photo_url = learner[:photo]
+  # seed_learner.remote_photo_url = learner[:photo]
   seed_learner.save!
   puts " - created #{seed_learner.first_name}"
 end
@@ -271,26 +261,26 @@ puts ""
 puts "Creating Instructors"
 INSTRUCTORS.each do |instructor|
   seed_instructor = User.new(instructor)
-  seed_instructor.remote_photo_url = instructor[:photo]
+  # seed_instructor.remote_photo_url = instructor[:photo]
   seed_instructor.save!
-  puts " - created #{seed_learner.first_name}"
+  puts " - created #{seed_instructor.first_name}"
 end
 
 puts ""
 puts "Creating Skills"
 SKILLS.each do |skill|
   seed_skill = Skill.new(skill)
-  seed_skill.user = Instructor.all.sample
-  seed_skill.remote_photo_url = skill[:photo]
+  seed_skill.user = User.last(INSTRUCTORS.length).sample
+  # seed_skill.remote_photo_url = skill[:photo]
   seed_skill.save!
   puts " - created #{seed_skill.title}"
 end
 
 puts ""
 puts "Creating Bookings"
-BOOKING.each do |booking|
+BOOKINGS.each do |booking|
   seed_booking = Booking.new(booking)
-  seed_booking.user = Learner.all.sample
+  seed_booking.user = User.first(LEARNERS.length).sample
   seed_booking.skill = Skill.all.sample
   seed_booking.save!
   puts " - created #{seed_booking.date}"
