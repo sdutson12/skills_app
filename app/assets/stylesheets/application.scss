@@ -16,3 +16,9 @@
 body {
   color: $dark-gray;
 }
+
+.sticky {
+  height: 60vh;
+  position: sticky;
+  top: 130px;
+}
