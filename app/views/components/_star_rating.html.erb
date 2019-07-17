@@ -1,5 +1,8 @@
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
+<% if defined?(stars) %>
+  <% stars.times do %>
+    <span class="fa fa-star checked"></span>
+  <% end %>
+  <% (5 - stars).times do %>
+    <span class="fa fa-star unchecked"></span>
+  <% end %>
+<% end %>
