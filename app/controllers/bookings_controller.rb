@@ -1,10 +1,13 @@
 class BookingsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: [:index]
+
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def create
@@ -16,6 +19,7 @@ class BookingsController < ApplicationController
     else
       render "skills/show"
     end
+    authorize @booking
   end
 
   private
