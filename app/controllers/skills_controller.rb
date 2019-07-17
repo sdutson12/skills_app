@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  # skip_before_action :authenticate_user!, only: [:index]
   before_action :set_skill, only: %i[show create edit update destroy]
 
   def index
@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
 
   def new
     @skill = Skill.new
+    authorize @skill
   end
 
   def create
