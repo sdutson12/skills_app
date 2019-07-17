@@ -1,0 +1,39 @@
+.new-skill-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  margin: 65px 0px;
+}
+
+#skill-form {
+  flex-grow: 1;
+  padding-right: 100px;
+}
+
+#header {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  margin-left: 55px;
+}
+
+#skill-image {
+  height: 520px;
+  width: 400px;
+  background-size: cover;
+}
+
+#header {
+  margin: 20px 0px;
+}
+
+.description {
+  height: 55px;
+}
+
+.margin {
+margin-top: 100px;
+margin-bottom: 100px;
+display:flex;
+justify-content: center;
+}
