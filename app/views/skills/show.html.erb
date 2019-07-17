@@ -1,0 +1,55 @@
+<%= render 'components/skill-banner' %>
+<div class="container-fluid container-medium mt-4">
+  <div class="row d-flex">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @skill.title %></h1>
+        <p class="flat-show-address"><%= @skill.sport  %> at <%= @skill.location %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this lesson </h3>
+        <p><%= @skill.description %></p>
+        <div class="map" style="background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')"></div>
+      </div>
+      <div class="flat-show-card">
+        <div class="row d-flex">
+          <div class="col-9 ">
+            <h3>About your instructor</h3>
+            <p>Sam is a lover of travel and knowledge of other cultures. After living in London, Seville and Sao Paulo in Brazil I decide to graduate from the professional Cooking School of Gambero Rosso.
+            I consolidated my training in kitchens of restaurants and hotels of great prestige and finally I returned to Rome, in the district Pigneto. Here I propose a Mediterranean cuisine, with strong and decisive flavors. Special attention to the techniques and preparations that respect the quality and the peculiarity of the raw materials, without ever giving up the innovation way</p>
+          </div>
+          <div class="col-3 mx-auto mt-5" style="text-align:center">
+            <img class="avatar-x-large mb-2" alt="avatar-x-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+            <p class="text-primary"><%= @skill.user.first_name %> <%= @skill.user.last_name %></p>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="row d-flex mx-0">
+          <h2>320 Reviews</h2>
+          <p class="mt-2 ml-3"><%= render 'components/star_rating' %></p>
+        </div>
+        <%= render 'components/review' %>
+        <%= render 'components/review' %>
+        <%= render 'components/review' %>
+      </div>
+    </div>
+    <div class="col-4">
+      <form class="sticky">
+        <div class="form-group skill-form flat-card">
+          <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
+          <p class="mt-0 mb-3"><%= render 'components/star_rating' %></p>
+          <label for="exampleInputEmail1">Date</label>
+          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pick a date">
+          <!--     <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small> -->
+          <div class="form-group">
+            <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="2">
+          </div>
+          <input type="submit" value="Book" class="btn btn-gradient mt-2" style="width: 100%">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

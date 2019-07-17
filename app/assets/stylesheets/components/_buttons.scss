@@ -35,6 +35,11 @@
   font-weight: bold;
   background-image: linear-gradient(-90deg, #fa6db3 0%, #fe7577 100%);
   transition: background 0.3s ease;
+  text-shadow: none;
+}
+
+.btn-search {
+  padding: 5px 15px;
 }
 
 .btn-gradient:hover {

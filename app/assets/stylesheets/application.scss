@@ -16,3 +16,21 @@
 body {
   color: $dark-gray;
 }
+
+.sticky {
+  height: 60vh;
+  position: sticky;
+  top: 130px;
+}
+
+.text-bottom-center{
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+.text-right{
+  bottom: 10px;
+  text-align: right;
+}
+
