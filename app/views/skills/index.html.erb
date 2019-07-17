@@ -3,48 +3,19 @@
   <div class="row mt-5 mx-1 mt-2">
     <h3>Top-rated Lessons</h3>
   </div>
-
   <div id="carouselExampleControls" class="carousel slide" data-interval="false">
     <div class="carousel-inner carousel-container">
-      <div class="carousel-item active">
-        <div class="row my-3">
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
+      <% @skills.each_slice(3) do |group| %>
+        <div class="carousel-item <%= 'active' if group.include?(@skills.first) %>">
+          <div class="row my-3">
+            <% group.each do |skill| %>
+              <div class="col-4">
+                <%= render 'components/card_landscape', skill: skill %>
+              </div>
+            <% end %>
           </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row my-3">
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row my-3">
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-          <div class="col-4">
-            <%= render 'components/card_landscape' %>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
     <a class="d-flex justify-content-start" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-button-left"><</span>

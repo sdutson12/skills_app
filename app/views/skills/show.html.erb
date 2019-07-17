@@ -4,7 +4,7 @@
     <div class="col-8">
       <div class="flat-show-card">
         <h1><%= @skill.title %></h1>
-        <p class="flat-show-address"><%= @skill.sport  %> at <%= @skill.location %></p>
+        <p class="flat-show-address"><%= @skill.sport.capitalize  %> at <%= @skill.location %></p>
       </div>
       <div class="flat-show-card">
         <h3>A bit more about this lesson </h3>
@@ -26,30 +26,37 @@
       </div>
       <div class="flat-show-card">
         <div class="row d-flex mx-0">
-          <h2>320 Reviews</h2>
-          <p class="mt-2 ml-3"><%= render 'components/star_rating' %></p>
+          <h2><%= @skill.reviews.count %> Reviews</h2>
+          <p class="mt-2 ml-3"><%= render 'components/star_rating', skill: @skill %></p>
         </div>
-        <%= render 'components/review' %>
-        <%= render 'components/review' %>
-        <%= render 'components/review' %>
+        <%= render 'components/review', skill: @skill %>
+        <%= render 'components/review', skill: @skill %>
+        <%= render 'components/review', skill: @skill %>
       </div>
     </div>
     <div class="col-4">
-      <form class="sticky">
-        <div class="form-group skill-form flat-card">
-          <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
-          <p class="mt-0 mb-3"><%= render 'components/star_rating' %></p>
-          <label for="exampleInputEmail1">Date</label>
-          <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pick a date">
-          <!--     <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small> -->
-          <div class="form-group">
-            <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="2">
-          </div>
-          <input type="submit" value="Book" class="btn btn-gradient mt-2" style="width: 100%">
-        </div>
-      </form>
+      <%= form_for [@skill, @booking], class: "sticky" do |f| %>
 
-    </div>
+
+
+      <div class="form-group skill-form flat-card">
+            <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
+         <p class="mt-0 mb-3"><%= render 'components/star_rating', skill: @skill %></p>
+        <label for="exampleInputEmail1">Date</label>
+        <%= f.date_field :date, class: "form-control"  %>
+        <div class="form-group">
+
+          <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
+          <%= f.select :num_of_hours, Booking::HOURS, class: "form-control" %>
+        </div>
+        <%= f.submit "Book", class: "btn btn-gradient mt-2", style: "width: 100%" %>
+        <% end %>
+
+      </div>
+    </form>
+
+
+
   </div>
+</div>
 </div>

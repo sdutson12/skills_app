@@ -13,9 +13,10 @@ class BookingsController < ApplicationController
   def create
     @skill = Skill.find(params[:skill_id])
     @booking = Booking.new(booking_params)
-    @skill = @booking.skill
+    @booking.skill = @skill
+    @booking.user = current_user
     if @booking.save
-      redirect_to skill_path(@skill)
+      redirect_to booking_path(@booking)
     else
       render "skills/show"
     end

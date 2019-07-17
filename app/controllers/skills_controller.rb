@@ -8,6 +8,7 @@ class SkillsController < ApplicationController
 
   def show
     authorize @skill
+    @booking = Booking.new
   end
 
   def new

@@ -15,4 +15,10 @@ class Skill < ApplicationRecord
   validates :sport, inclusion: { in: SPORTS }
   validates :price, presence: true
   validates :price, numericality: { only_integer: true }
+
+  def rating
+    return "Not reviewed yet." if !reviews.count.positive?
+
+    self.reviews.reduce(0) { |a, r| a + r.stars } / self.reviews.count.to_f
+  end
 end
