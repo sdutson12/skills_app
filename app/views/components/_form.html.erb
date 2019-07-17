@@ -1,11 +1,14 @@
-<form action="">
-  <div class="input-group">
-    <span class="input-group-addon" id="basic-addon1">From:</span>
-    <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+<form class="sticky">
+  <div class="form-group skill-form flat-card">
+    <h2><strong>$20</strong></h2><span><p>per hour</p></span>
+    <p class=""><%= render 'components/star_rating' %></p>
+    <label for="exampleInputEmail1">Date</label>
+    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pick a date">
+<!--     <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small> -->
+    <div class="form-group">
+      <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="2">
+    </div>
+    <input type="submit" value="Book" class="btn btn-gradient mt-2" style="width: 100%">
   </div>
-  <div class="input-group mt-2">
-    <span class="input-group-addon" id="basic-addon1">To:</span>
-    <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
-  <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
 </form>
