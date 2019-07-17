@@ -33,23 +33,24 @@
         <% end  %>
       </div>
     </div>
-    <div class="col-4">
-      <form action="/skills/<%= @skill.id %>/bookings" method="post" class="sticky">
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <div class="form-group skill-form flat-card">
-          <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
-          <p class="mt-0 mb-3"><%= render 'components/star_rating', stars: @skill.average_stars %></p>
-          <label for="exampleInputEmail1">Date</label>
-          <input type="date" class="form-control" id="exampleInputEmail1" name="booking[date]" aria-describedby="emailHelp" placeholder="Pick a date">
-          <!--     <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small> -->
-          <div class="form-group">
-            <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
-            <input type="number" name="booking[num_of_hours]" class="form-control" id="exampleInputPassword1" placeholder="2">
-          </div>
-          <input type="submit" value="Book" class="btn btn-gradient mt-2" style="width: 100%">
-        </div>
-      </form>
-
+  <div class="col-4">
+    <%= form_for [@skill, @booking], class: "sticky" do |f| %>
+    <div class="form-group skill-form flat-card">
+      <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
+      <p class="mt-0 mb-3"><%= render 'components/star_rating', skill: @skill %></p>
+      <label for="exampleInputEmail1">Date</label>
+      <%= f.date_field :date, class: "form-control"  %>
+      <div class="form-group">
+        <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
+        <%= f.select :num_of_hours, Booking::HOURS, class: "form-control" %>
+      </div>
+      <%= f.submit "Book", class: "btn btn-gradient mt-2", style: "width: 100%" %>
+      <% end %>
     </div>
   </div>
+
+
+
+</div>
+</div>
 </div>
