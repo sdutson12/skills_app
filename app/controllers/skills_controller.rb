@@ -18,6 +18,9 @@ class SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(skill_params)
+    authorize @skill
+    @skill.location = "location"
+    @skill.user = current_user
     if @skill.save
       redirect_to skill_path(@skill)
     else
@@ -45,10 +48,10 @@ class SkillsController < ApplicationController
 
   def skill_params
     params.require(:skill).permit(:title, :description, :sport, :price, :photo, :location)
-    authorize @skill
   end
 
   def set_skill
     @skill = Skill.find(params[:id])
+    authorize @skill
   end
 end
