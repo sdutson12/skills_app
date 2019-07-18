@@ -6,7 +6,7 @@
       <p><%= skill.location.upcase %></p>
       <h2><%= skill.title %></h2>
       <p><%= skill.price %> USD</p>
-      <%= render 'components/star_rating', skill: skill %>
+      <%= render 'components/star_rating', stars: skill.average_stars %>
     </div>
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
