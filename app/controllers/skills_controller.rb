@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :search]
   before_action :set_skill, only: %i[show edit update destroy]
 
   def index
@@ -41,6 +41,13 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     redirect_to skills_path
+  end
+
+  def search
+    search_skill = params[:skill] if params[:skill].present?
+    search_location = params[:location] if params[:location].present?
+
+    @skills = policy_scope(Skill).where(sport: search_skill, location: search_location)
   end
 
   private

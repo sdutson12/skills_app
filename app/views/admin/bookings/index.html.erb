@@ -2,7 +2,7 @@
   <h1 class="my-3"><strong>Your Bookings</strong></h1>
   <h3 class="my-4">Upcoming lesson requests</h3>
   <div class="mb-3">
-    <% @bookings.each do |booking| %>
+    <% current_user.booked_skills.each do |booking| %>
       <% unless booking.date.past?  %>
         <%= render 'components/booking_admin', booking: booking %>
       <% end %>

@@ -1,0 +1,19 @@
+<h1>Search results</h1>
+
+<% if @skills.first.present? %>
+  <% @skills.each do |skill| %>
+  <%= skill.title %>
+  <br>
+  <%= skill.user.first_name %>
+  <br>
+  <%= skill.sport %>
+  <% end %>
+<% else %>
+  <h3>Sorry, there are no instructors for your search. Please try again.</h6>
+    <%= link_to skills_path do %>
+      <input type="submit" value="Back to Home" class="btn btn-gradient" style="width: 30%">
+    <% end %>
+  </div>
+</div>
+
+<% end %>
