@@ -29,6 +29,7 @@
         <% if signed_in? %>
           <% if current_user.photo.present? %>
             <%= cl_image_tag current_user.photo.url, class: "avatar" %>
+
             <% else %>
               <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="http://catchingfire.ca/wp-content/uploads/2016/09/question-mark-square-01.png" />
           <% end %>
