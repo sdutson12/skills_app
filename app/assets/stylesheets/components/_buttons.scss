@@ -23,33 +23,33 @@
 }
 
 .btn-pending {
-  color: $red;
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
   padding: 8px 24px;
   border-radius: 50px;
-  background: $warning;
-  transition: background 0.3s ease;
-  text-shadow: none;
-  font-size: small;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .btn-accepted {
-  color: $white;
+  color: $green;
+  border: 1px solid $green;
   padding: 8px 24px;
   border-radius: 50px;
-  background: $dark-blue;
-  transition: background 0.3s ease;
-  text-shadow: none;
-  font-size: small;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .btn-cancelled {
-  color: $white;
+  color: $red;
+  border: 1px solid $red;
   padding: 8px 24px;
   border-radius: 50px;
-  background: $danger;
-  transition: background 0.3s ease;
-  text-shadow: none;
-  font-size: small;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .btn-flat:hover {
