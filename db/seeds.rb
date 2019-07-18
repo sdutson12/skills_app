@@ -159,7 +159,7 @@ INSTRUCTORS = [  {
 SKILLS = [ {
     title: 'Learn to play hockey with me!' ,
     description: 'Hi! I\'ve been playing hockey for 8 years teaching it for 3 years. I would love to share my skills with you! Hope to meet you soon :)',
-    sport: 'hockey',
+    sport: 'Hockey',
     price: 30,
     location: 'Boston',
     photo: 'https://images.unsplash.com/photo-1554186285-e2bc44c34216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -167,7 +167,7 @@ SKILLS = [ {
   {
     title: 'Learn to play golf with me!' ,
     description: 'Hi! I\'ve been teaching golf for 7 years. I would love to share my skills with you! Hope to meet you soon :)',
-    sport: 'golf',
+    sport: 'Golf',
     price: 65,
     location: 'Boston',
     photo: 'https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
@@ -175,7 +175,7 @@ SKILLS = [ {
   {
     title: 'Learn to do yoga!',
     description: 'Hi! I\'ve been doing yoga my whole life! I would love to share my skills with you! Hope to meet you soon :)',
-    sport: 'yoga',
+    sport: 'Yoga',
     price: 30,
     location: 'Boston',
     photo: 'https://images.unsplash.com/photo-1473022082832-5a30701d4f2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -183,7 +183,7 @@ SKILLS = [ {
   {
     title: 'Come play basketball with me!',
     description: 'Hey there! I\'ve love playing \'ball! I\'ll turn you into the next Uncle Drew!',
-    sport: 'basketball',
+    sport: 'Basketball',
     price: 45,
     location: 'Boston',
     photo: 'https://images.unsplash.com/photo-1525916192735-22142b82d37a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -191,7 +191,7 @@ SKILLS = [ {
   {
     title: 'Climbing lessons!',
     description: 'Hey there! I\'ve been climbing for a few years, and I\'ve really fallen in love with the sport. I would love to share my passion for climbing with you!',
-    sport: 'rock climbing',
+    sport: 'Rock climbing',
     price: 70,
     location: 'Denver',
     photo: 'https://images.unsplash.com/photo-1480970653448-02835da67676?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
@@ -199,7 +199,7 @@ SKILLS = [ {
   {
     title: 'Exciting and adventurous climbing lesson!',
     description: 'Hey there! I\'ve been climbing for a few years, and I\'ve really fallen in love with the sport. I would love to share my passion for climbing with you!',
-    sport: 'rock climbing',
+    sport: 'Rock climbing',
     price: 75,
     location: 'Denver',
     photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1386&q=80'
@@ -207,7 +207,7 @@ SKILLS = [ {
   {
     title: 'Let\'s ski together!',
     description: 'I love skiing and would love to share this passion with you. Let\'s have fun skiing together!',
-    sport: 'skiing',
+    sport: 'Skiing',
     price: 55,
     location: 'Denver',
     photo: 'https://images.unsplash.com/photo-1517660895948-131a6d6c55d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1786&q=80'
@@ -215,7 +215,7 @@ SKILLS = [ {
   {
     title: 'Fun-filled snowboarding lesson!',
     description: 'I love snowboarding and would love to share this passion with you. Let\'s have fun snowboarding together!',
-    sport: 'snowboarding',
+    sport: 'Snowboarding',
     price: 85,
     location: 'Denver',
     photo: 'https://images.unsplash.com/photo-1523287409476-a9e70a25af3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
@@ -223,7 +223,7 @@ SKILLS = [ {
   {
     title: 'Swimming lessons!',
     description: 'I\'m an avid swimmer. Let\'s have fun swimming together!',
-    sport: 'swimming',
+    sport: 'Swimming',
     price: 35,
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1438029071396-1e831a7fa6d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2584&q=80'
@@ -231,7 +231,7 @@ SKILLS = [ {
   {
     title: 'Affordable surfing lessons!',
     description: 'I\'m an avid surfer, and the waves here are perfect! I can teach beginner and intermediate learners. Let\'s go out and enjoy a day in the ocean!',
-    sport: 'surfing',
+    sport: 'Surfing',
     price: 25,
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1466916932233-c1b9c82e71c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -239,7 +239,7 @@ SKILLS = [ {
   {
     title: 'Yoga with a professional yoga teacher!',
     description: 'I\'m an avid yogi. I have taken many courses and have been teaching for many years. Let\'s have fun doing yoga together!',
-    sport: 'yoga',
+    sport: 'Yoga',
     price: 20,
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1588&q=80'
@@ -247,7 +247,7 @@ SKILLS = [ {
   {
     title: 'Cycling with an experienced cyclist!',
     description: 'I love cycling, and would love to take you around the fun cycling trails near San Diego. I have been cycling for many years. Let\'s have fun cycling together!',
-    sport: 'cycling',
+    sport: 'Cycling',
     price: 15,
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80'
@@ -255,7 +255,7 @@ SKILLS = [ {
   {
     title: 'Let\'s play lacrosse!',
     description: 'Hi there! I\'ve been playing lacrosse my entire life, and absolutely love the sport. I have been coaching teams for many years as well. Let\'s have fun playing lacrosse together!',
-    sport: 'lacrosse',
+    sport: 'Lacrosse',
     price: 25,
     location: 'New York City',
     photo: 'https://images.unsplash.com/photo-1526563461317-c12247aef762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1240&q=80'
@@ -263,7 +263,7 @@ SKILLS = [ {
   {
     title: 'Fun jiu-jitsu lessons for beginners!',
     description: 'I\'m an avid martial arts person. Let\'s have fun learning together!',
-    sport: 'jiu-jitsu',
+    sport: 'Jiu-jitsu',
     price: 25,
     location: 'New York City',
     photo: 'https://images.unsplash.com/photo-1515025617920-e1e674b5033c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1628&q=80 jiu-jitsu'
@@ -271,7 +271,7 @@ SKILLS = [ {
   {
     title: 'Learn lots of fun soccer tricks!',
     description: 'Hi there! I\'ve been playing soccer my entire life, and absolutely love the sport. I have been coaching teams for many years as well. Let\'s have fun playing soccer together!',
-    sport: 'soccer',
+    sport: 'Soccer',
     price: 25,
     location: 'New York City',
     photo: 'https://images.unsplash.com/photo-1504305754058-2f08ccd89a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
@@ -279,7 +279,7 @@ SKILLS = [ {
   {
     title: 'Fun tennis lessons for beginners!',
     description: 'Hi there! I\'ve been playing tennis my entire life, and absolutely love the sport. I have been coaching teams for many years as well. Let\'s have fun playing tennis together!',
-    sport: 'tennis',
+    sport: 'Tennis',
     price: 25,
     location: 'New York City',
     photo: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
