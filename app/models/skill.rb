@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-  SPORTS = %w[soccer basketball lacrosse hockey gymnastics rock\ climbing swimming golf yoga tennis cycling surfing jiu-jitsu]
+  SPORTS = %w[soccer basketball lacrosse hockey gymnastics rock\ climbing swimming golf yoga tennis cycling surfing jiu-jitsu skiing snowboarding]
   mount_uploader :photo, PhotoUploader
 
   belongs_to :user, dependent: :destroy
