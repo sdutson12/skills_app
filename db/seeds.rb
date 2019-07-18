@@ -252,7 +252,6 @@ SKILLS = [ {
     location: 'San Diego',
     photo: 'https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80'
   },
-
   {
     title: 'Let\'s play lacrosse!',
     description: 'Hi there! I\'ve been playing lacrosse my entire life, and absolutely love the sport. I have been coaching teams for many years as well. Let\'s have fun playing lacrosse together!',

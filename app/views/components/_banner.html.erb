@@ -11,11 +11,24 @@
     <div class="form-group">
       <h2>What new skill do you want to learn?</h2>
       <label for="Skills">Skills</label>
-      <select id="sports-input" class="select2"></select>
-      <label for="Location">Location</label>
-      <select id="location-input" class="select2"></select>
+      <select class="select2" name="skill">
+        <% Skill::SPORTS.each do |sport| %>
+          <option><%= sport %></option>
+        <% end %>
+      </select>
+      <label for="Skills">Location</label>
 
+      <% skill_locations = [] %>
+      <%  Skill.all.each do |skill| %>
+      <% skill_locations << skill.location %>
+      <% end %>
+      <% form_locations = skill_locations.uniq %>
 
+      <select class="select2" name="location">
+        <% form_locations.each do |location| %>
+          <option><%= location %></option>
+        <% end %>
+      </select>
 
     </div>
     <div class="form-group">
