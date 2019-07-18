@@ -22,6 +22,36 @@
   font-weight: bolder;
 }
 
+.btn-pending {
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-accepted {
+  color: $green;
+  border: 1px solid $green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cancelled {
+  color: $red;
+  border: 1px solid $red;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
 .btn-flat:hover {
   background: #ffd1c6;
   color: $red;
