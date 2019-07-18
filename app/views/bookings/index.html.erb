@@ -1,0 +1,23 @@
+<div class="container-medium" style="margin-top: 100px;">
+  <h1 class="my-3"><strong>Your Bookings</strong></h1>
+  <h3 class="my-4">Upcoming lessons</h3>
+  <div class="mb-3">
+    <% @bookings.each do |booking| %>
+      <% unless booking.date.past?  %>
+        <%= render 'components/booking', booking: booking %>
+      <% end %>
+    <% end  %>
+  </div>
+  <h3 class="mt-5 mb-2">Past lessons</h3>
+  <div class="row justify-content-start mt-4">
+    <% @bookings.each do |booking|  %>
+      <% if booking.date.past?  %>
+        <div class="col-4 my-2">
+          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.skill.photo %>)">
+            <%= link_to booking.skill.title, skill_path(booking.skill) %>
+          </div>
+        </div>
+      <% end  %>
+    <% end  %>
+  </div>
+</div>

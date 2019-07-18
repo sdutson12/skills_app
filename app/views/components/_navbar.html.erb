@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="d-flex">
-    <a class="navbar-brand" href="#">
-      <img src="https://cdn.freebiesupply.com/images/large/2x/airbnb-logo.png"/>
-    </a>
+      <%= link_to root_path  do %>
+      <%= image_tag "airbnb.png", class: "avatar" %>
+      <% end %>
     <%= render 'components/searchbar' %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="skills/new">Become an instructor</a>
+        <a class="nav-link text-white" href="/skills/new">Become an instructor</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="#">My bookings</a>
