@@ -3,7 +3,7 @@
   <div class="notification-content">
     <p><small><%= booking.date %></small></p>
     <h5 class="my-0"><%= booking.skill.title %></h5>
-    <h6 class="mt-0">Location: <%= booking.skill.location.upcase %></h6>
+    <h6 class="my-0">Location: <%= booking.skill.location.upcase %></h6>
     <h6 class="mt-0">Instructor name: <%= booking.skill.user.first_name %> <%= booking.skill.user.last_name %></h6>
     <% if booking.status.downcase == "pending" %>
       <h6 class="btn btn-pending" id="button-tag">Pending</h6>
