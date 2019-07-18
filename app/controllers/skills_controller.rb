@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_skill, only: %i[show create edit update destroy]
+  before_action :set_skill, only: %i[show edit update destroy]
 
   def index
     @skills = policy_scope(Skill).all
@@ -19,7 +19,6 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     authorize @skill
-    @skill.location = "location"
     @skill.user = current_user
     if @skill.save
       redirect_to skill_path(@skill)
