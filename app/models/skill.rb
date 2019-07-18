@@ -23,4 +23,10 @@ class Skill < ApplicationRecord
       0
     end
   end
+
+  def self.unique_location
+    self.all.map do |skill|
+      skill.location
+    end.uniq
+  end
 end

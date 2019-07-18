@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :skills do
     resources :bookings, only: :create
   end
+  get '/search', to: 'skills#search', as: :skills_search
   resources :bookings, only: [:index, :show] do
     resources :reviews, only: :create
   end

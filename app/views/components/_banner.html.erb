@@ -1,10 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1386&q=80);">
 
-   <div class="cta">
+  <div class="cta">
     <h1><em>Learn</em> a new skill with <strong>APTITUDE</strong></h1>
     <p>Join over 100,000 people already learning new skills on APTITUDE! </p>
     <a class="btn btn-gradient" href="#">Apply now</a>
-    </div>
+  </div>
 
   <div class="search">
      <form class="form-banner" action="/">
@@ -17,25 +17,20 @@
         <% end %>
       </select>
       <label for="Skills">Location</label>
-
-      <% skill_locations = [] %>
-      <%  Skill.all.each do |skill| %>
-      <% skill_locations << skill.location %>
-      <% end %>
-      <% form_locations = skill_locations.uniq %>
-
       <select class="select2" name="location">
-        <% form_locations.each do |location| %>
+        <% Skill.unique_location.each do |location| %>
           <option><%= location %></option>
         <% end %>
       </select>
 
     </div>
-    <div class="form-group">
+     <div class="form-group">
       <label for="exampleInputPassword1">Date</label>
       <input type="date"  name="date" class="form-control" id="date1" placeholder="Date">
     </div>
-    <input type="submit" value="Search" class="btn btn-gradient">
+      <%= link_to skills_search_path do %>
+      <input type="submit" value="Search" class="btn btn-gradient" style="width: 100%">
+    <% end %>
     </form>
   </div>
 
