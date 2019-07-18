@@ -26,31 +26,31 @@
       <div class="flat-show-card">
         <div class="row d-flex mx-0">
           <h2><%= @skill.reviews.count %> Reviews</h2>
-          <p class="mt-2 ml-3"><%= render 'components/star_rating' %></p>
+          <p class="mt-2 ml-3"><%= render 'components/star_rating', @skill.average_stars %></p>
         </div>
         <% @skill.reviews.each do |review| %>
         <%= render 'components/review', review: review %>
         <% end  %>
       </div>
     </div>
-  <div class="col-4 sticky">
-    <%= form_for [@skill, @booking], class: "sticky" do |f| %>
-    <div class="form-group skill-form flat-card">
-      <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
-      <p class="mt-0 mb-3"><%= render 'components/star_rating', skill: @skill %></p>
-      <label for="exampleInputEmail1">Date</label>
-      <%= f.date_field :date, class: "form-control"  %>
-      <div class="form-group">
-        <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
-        <%= f.select :num_of_hours, Booking::HOURS, class: "form-control" %>
+    <div class="col-4 sticky">
+      <%= form_for [@skill, @booking], class: "sticky" do |f| %>
+      <div class="form-group skill-form flat-card">
+        <h2 class="my-0"><strong>USD <%= @skill.price %></strong></h2><span><p class="my-0">per hour</p></span>
+        <p class="mt-0 mb-3"><%= render 'components/star_rating', skill: @skill %></p>
+        <label for="exampleInputEmail1">Date</label>
+        <%= f.date_field :date, class: "form-control"  %>
+        <div class="form-group">
+          <label class="mt-4" for="exampleInputPassword1">Number of Hours</label>
+          <%= f.select :num_of_hours, Booking::HOURS, class: "form-control" %>
+        </div>
+        <%= f.submit "Book", class: "btn btn-gradient mt-2", style: "width: 100%" %>
+        <% end %>
       </div>
-      <%= f.submit "Book", class: "btn btn-gradient mt-2", style: "width: 100%" %>
-      <% end %>
     </div>
+
+
+
   </div>
-
-
-
-</div>
 </div>
 </div>
