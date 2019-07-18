@@ -1,0 +1,15 @@
+<div class="notification position-relative">
+  <img class="avatar" src=<%= booking.skill.user.photo %> />
+  <div class="notification-content">
+    <p><small><%= booking.date %></small></p>
+    <h5 class="my-0"><%= booking.skill.title %></h5>
+    <h6 class="mt-0"><%= booking.skill.location.upcase %></h6>
+    <% if booking.status.downcase == "pending" %>
+      <h6 class="btn btn-pending" id="button-tag">Pending</h6>
+    <% elsif booking.status.downcase == "accepted" %>
+      <h6 class="btn btn-accepted" id="button-tag">Accepeted</h6>
+    <% else %>
+      <h6 class="btn btn-cancelled" id="button-tag">Cancelled</h6>
+    <% end %>
+  </div>
+</div>
