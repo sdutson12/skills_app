@@ -14,7 +14,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <% if signed_in? && current_user.instructor? %>
-          <%= link_to "Go to future lessons", root_path, class:"nav-link text-white" %>
+          <%= link_to "Go to future lessons", class:"nav-link text-white" %>
         <% else %>
           <%= link_to "Become an instructor", root_path, class:"nav-link text-white" %>
         <% end %>
