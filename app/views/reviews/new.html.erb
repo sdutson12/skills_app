@@ -1,0 +1,22 @@
+<div class="margin">
+  <div class="container new-skill-wrapper">
+    <div id="skill-form">
+      <h1 id="header" class="text-left">Add a review for <%= @booking.skill.user.first_name %></h1>
+      <div>
+        <%= simple_form_for [@booking, @review] do |f| %>
+        <h4>How was your lesson? </h4>
+         <%= f.collection_radio_buttons :stars, [[5], [4], [3], [2], [1]], :first, :last, item_wrapper_tag: false, boolean_style: :inline do |b| %>
+            <%= b.radio_button + b.label {''} %>
+          <% end  %>
+
+        <%= f.input :title, class: "form-control mt-3", placeholder: 'Describe your experience in a few words...' %>
+        <%= f.input :content, placeholder: 'Tell future learners about what they can expect with this lesson', class:"form-control description" %>
+        <%= f.button :submit, class: "btn btn-gradient" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="skill-image" style="background-image: url(https://images.unsplash.com/photo-1521115507110-6a627e5ce14e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);">
+    </div>
+  </div>
+</div>
