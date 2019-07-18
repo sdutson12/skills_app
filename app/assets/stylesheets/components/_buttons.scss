@@ -22,6 +22,36 @@
   font-weight: bolder;
 }
 
+.btn-pending {
+  color: $red;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $warning;
+  transition: background 0.3s ease;
+  text-shadow: none;
+  font-size: small;
+}
+
+.btn-accepted {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $dark-blue;
+  transition: background 0.3s ease;
+  text-shadow: none;
+  font-size: small;
+}
+
+.btn-cancelled {
+  color: $white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $danger;
+  transition: background 0.3s ease;
+  text-shadow: none;
+  font-size: small;
+}
+
 .btn-flat:hover {
   background: #ffd1c6;
   color: $red;

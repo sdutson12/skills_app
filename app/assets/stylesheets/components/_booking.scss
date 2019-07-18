@@ -1,3 +1,4 @@
+
 .notification {
   display: flex;
   align-items: center;
@@ -7,6 +8,9 @@
   border: 1px solid rgb(235,235,235);
 }
 
+.position-relative {
+  position: relative;
+}
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
