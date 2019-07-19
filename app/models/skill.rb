@@ -2,7 +2,7 @@ class Skill < ApplicationRecord
   SPORTS = %w[Basketball Cycling Golf Gymnastics Hockey Jiu-jitsu Lacrosse Rock\ climbing Skiing Swimming Surfing Snowboarding Soccer Tennis Yoga]
   mount_uploader :photo, PhotoUploader
 
-  include PgSearch::Model
+  include PgSearch
   pg_search_scope :global_search,
     against: [ :title, :description ],
     associated_against: {
