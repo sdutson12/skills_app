@@ -1,11 +1,7 @@
-<%= render 'components/skill-banner' %>
-<div class="container-fluid container-medium mt-4 ">
-  <div class="row d-flex">
-    <div class="col-8">
-      <div class="flat-show-card">
-        <h1><%= @skill.title %></h1>
-        <p class="flat-show-address"><%= @skill.sport.capitalize  %> at <%= @skill.location %></p>
-      </div>
+<div class="container-fluid container-medium mt-4 " >
+  <div class="row d-flex" id="container-show-big">
+    <div class="col-8 skill-information-wrapper">
+      <%= render 'components/skills_show_banner' %>
       <div class="flat-show-card">
         <h3>A bit more about this lesson </h3>
         <p><%= @skill.description %></p>
