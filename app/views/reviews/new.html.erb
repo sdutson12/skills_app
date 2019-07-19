@@ -8,7 +8,7 @@
         <%= f.input :stars, as: :hidden %>
         <ul class="list-inline">
         <% 5.times do |i| %>
-          <li class="list-inline-item"><i class="fas fa-star review" data-star-number="<%= i %>"></i></li>
+          <li class="list-inline-item"><i class="fas fa-star review-star star-control" data-star-number="<%= i %>"></i></li>
         <% end %>
         </ul>
         <%= f.input :title, class: "form-control mt-5", placeholder: 'Describe your experience in a few words...' %>
