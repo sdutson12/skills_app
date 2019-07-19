@@ -54,7 +54,7 @@ LEARNERS = [ {
   password: 123456754,
   email: 'yuyu@mail.com',
   information: 'Hi all, my name is Phyllis. I used to work in procurement but I would like to change my career. My husband introduced me to coding and I started to enjoy building things on the web. After Le Wagon, I would like to continue developing my skills, hopefully as a junior developer at a company which encourages growth and development.',
-  photo: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
+  photo: 'https://avatars1.githubusercontent.com/u/49326447?v=4'
   },
 ]
 
@@ -182,7 +182,7 @@ SKILLS = [ {
   },
   {
     title: 'Come play basketball with me!',
-    description: 'Hey there! I\'ve love playing \'ball! I\'ll turn you into the next Uncle Drew!',
+    description: 'Hey there! I love playing \'ball! I\'ll turn you into the next Uncle Drew! ',
     sport: 'Basketball',
     price: 45,
     location: 'Boston',
