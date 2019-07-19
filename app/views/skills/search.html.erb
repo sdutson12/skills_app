@@ -1,19 +1,38 @@
-<h1>Search results</h1>
+<div class="container-medium-small all-card-info">
 
-<% if @skills.first.present? %>
-  <% @skills.each do |skill| %>
-  <%= skill.title %>
-  <br>
-  <%= skill.user.first_name %>
-  <br>
-  <%= skill.sport %>
-  <% end %>
-<% else %>
-  <h3>Sorry, there are no instructors for your search. Please try again.</h6>
-    <%= link_to skills_path do %>
-      <input type="submit" value="Back to Home" class="btn btn-gradient" style="width: 30%">
+  <div class="search-header-one text-center">
+    <% if @skills.empty? %>
+      <h3>No lessons match your search!</h3>
+    <% elsif @skills.count == 1 %>
+      <h3>1 lesson near you!</h3>
+    <% else %>
+      <h3> <%= @skills.count %> lessons near you!</h3>
     <% end %>
   </div>
-</div>
 
-<% end %>
+  <div class="search-header-two text-center">
+    <% if @skills.empty? %>
+        <h3 class="text-center">Please search again</h3>
+        <%= link_to "Back to Search", skills_path %>
+    <% end %>
+  </div>
+
+  <div>
+    <% if !@skills.empty? %>
+      <% @skills.each do |skill| %>
+        <%= link_to skill_path(skill) do %>
+          <div class="card-search-result">
+            <%= cl_image_tag skill.photo %>
+            <div class="card-search-result-infos">
+              <p><%= skill.location.upcase %></p>
+              <h2><%= skill.title %></h2>
+              <h6>Instructor: <%= skill.user.first_name %></p>
+              <h6>$<%= skill.price %> USD</p>
+              <%= render 'components/star_rating', stars: skill.average_stars %>
+            </div>
+          </div>
+      <% end %>
+      <% end %>
+      <% end %>
+  </div>
+</div>
