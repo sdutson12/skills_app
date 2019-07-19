@@ -9,7 +9,9 @@
 }
 
 .btn-ghost:hover {
+  color: #0a1450;
   opacity: 1;
+  border: 1px solid #0a1450;
 }
 
 .btn-flat {
@@ -33,14 +35,19 @@
 }
 
 .btn-accepted {
-  color: $green;
-  border: 1px solid $green;
+  color: #008489;
+  border: 1px solid #008489;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  &:hover {
+    color: #04bbc2;
+    border: 1px solid #04bbc2;
+  }
 }
+
 
 .btn-cancelled {
   color: $red;
@@ -50,6 +57,10 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+  }
 }
 
 .btn-flat:hover {
