@@ -1,19 +1,13 @@
-<h1>Search results</h1>
-
-<% if @skills.first.present? %>
-  <% @skills.each do |skill| %>
-  <%= skill.title %>
-  <br>
-  <%= skill.user.first_name %>
-  <br>
-  <%= skill.sport %>
-  <% end %>
-<% else %>
-  <h3>Sorry, there are no instructors for your search. Please try again.</h6>
-    <%= link_to skills_path do %>
-      <input type="submit" value="Back to Home" class="btn btn-gradient" style="width: 30%">
+<div class="container">
+  <div class="search-header pt-50">
+    <% if @skills.empty? %>
+      <h3>No lessons match your search!</h3>
+    <% elsif @skills.count == 1 %>
+      <h3>1 lesson near you!</h3>
+    <% else %>
+      <h3> <%= @skills.count %> lessons near you!</h3>
     <% end %>
   </div>
 </div>
 
-<% end %>
+

@@ -46,7 +46,7 @@ LEARNERS = [ {
   password: 123446754,
   email: 'orlando@mail.com',
   information: 'I am a devops engineer ; and I love bodyboarding and capoeira. I am actually living in the US, and I would like to have some more coding skills.',
-  photo: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
+  photo: 'https://avatars2.githubusercontent.com/u/23037260?v=4'
   },
   {
   first_name: 'Yu Yu',
@@ -435,7 +435,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!',
+  title: 'Lo mejor instructor que tuve!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable.',
   stars: 5,
   },
@@ -485,7 +485,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!!',
+  title: 'Lo mejor instructor que tuve!!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable!',
   stars: 5,
   },
@@ -535,7 +535,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!!!!',
+  title: 'Lo mejor instructor que tuve!!!!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable!!',
   stars: 5,
   }
