@@ -33,12 +33,28 @@
     <h3>Popular lessons by location</h3>
   </div>
   <div>
-    <div class="row my-3">
-      <% @locations.each do |location_with_skill| %>
-        <div class="col-3">
-          <%= render 'components/card_portrait', location_with_skill: location_with_skill %>
+    <div id="carouselExampleControls-a" class="carousel slide" data-interval="false">
+      <div class="carousel-inner carousel-container">
+        <% @locations.each_slice(4) do |group| %>
+        <div class="carousel-item <%= 'active' if group.include?(@locations.first) %>">
+          <div class="row my-3">
+            <% group.each do |location_with_skill| %>
+              <div class="col-3">
+                <%= render 'components/card_portrait', location_with_skill: location_with_skill %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      <% end %>
+        <% end %>
+      </div>
+      <a class="d-flex justify-content-start" href="#carouselExampleControls-a" role="button" data-slide="prev">
+      <span class="carousel-button-left"><</span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="d-flex justify-content-end" href="#carouselExampleControls-a" role="button" data-slide="next">
+      <span class="carousel-button-right">></span>
+      <span class="sr-only">Next</span>
+    </a>
     </div>
   </div>
 
