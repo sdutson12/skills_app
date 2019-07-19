@@ -12,18 +12,13 @@
   <div class="row justify-content-start mt-4">
     <% @bookings.each do |booking|  %>
       <% if booking.date.past?  %>
-        <div class="col-4 my-2">
-          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.skill.photo %>)">
-            <%= link_to booking.skill.title, skill_path(booking.skill), class: "mx-auto my-auto" %>
-            <%= link_to new_booking_review_path(booking) do %>
-            Leave a Review
-              <i class="fas fa-pencil-alt"></i>
-            <% end %>
-          </div>
+        <div class="col-4">
+          <%= render 'components/card_landscape_booking', booking: booking %>
         </div>
-          </div>
-        </div>
-      <% end  %>
-    <% end  %>
+      <% end %>
+    <% end %>
   </div>
 </div>
+
+
+<!--  -->

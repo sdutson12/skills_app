@@ -1,3 +1,18 @@
 .card-booking-title {
 
 }
+
+.text-booking-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  text-shadow: 1px solid black;
+}
+
+.text-booking-review {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: smaller;
+}
