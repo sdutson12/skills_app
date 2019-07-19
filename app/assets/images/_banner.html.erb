@@ -1,0 +1,39 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1386&q=80);">
+
+  <div class="cta">
+    <h2><em>Learn</em> a new skill with</h2>
+    <h1 id="banner-typed-text"></h1>
+    <p>Join over 100,000 people already learning new skills on APTITUDE! </p>
+    <a class="btn btn-gradient" href="#">Apply now</a>
+  </div>
+
+  <div class="search">
+     <form class="form-banner" action="/search" method='get'>
+    <div class="form-group">
+      <h3>What new skill do you want to learn?</h3>
+      <label for="Skills">Skills</label>
+      <select class="select2" name="skill">
+        <% Skill::SPORTS.each do |sport| %>
+          <option><%= sport %></option>
+        <% end %>
+      </select>
+      <label for="Skills">Location</label>
+      <select class="select2" name="location">
+        <% Skill.unique_location.each do |location| %>
+          <option><%= location %></option>
+        <% end %>
+      </select>
+
+    </div>
+     <div class="form-group">
+      <label for="exampleInputPassword1">Date</label>
+      <input type="date"  name="date" class="form-control" id="date1" placeholder="Date">
+    </div>
+      <%= link_to skills_search_path do %>
+       <input type="submit" value="Search" class="btn btn-gradient" style="width: 100%">
+    <% end %>
+    </form>
+  </div>
+
+</div>
+
