@@ -1,7 +1,7 @@
-<%= link_to skills_search_path, class: "card-link" do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= skill.photo %>)">
+<%= link_to skills_search_path(location: location_with_skill[0]), class: "card-link" do %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= location_with_skill[1].photo %>)">
     <div class="text-bottom-center">
-      <h4><%= skill.location %></h4>
+      <h4><%= location_with_skill[0] %></h4>
     </div>
   </div>
 <% end  %>
