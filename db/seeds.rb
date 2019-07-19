@@ -46,7 +46,7 @@ LEARNERS = [ {
   password: 123446754,
   email: 'orlando@mail.com',
   information: 'I am a devops engineer ; and I love bodyboarding and capoeira. I am actually living in the US, and I would like to have some more coding skills.',
-  photo: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
+  photo: 'https://avatars2.githubusercontent.com/u/23037260?v=4'
   },
   {
   first_name: 'Yu Yu',
@@ -54,7 +54,7 @@ LEARNERS = [ {
   password: 123456754,
   email: 'yuyu@mail.com',
   information: 'Hi all, my name is Phyllis. I used to work in procurement but I would like to change my career. My husband introduced me to coding and I started to enjoy building things on the web. After Le Wagon, I would like to continue developing my skills, hopefully as a junior developer at a company which encourages growth and development.',
-  photo: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
+  photo: 'https://avatars1.githubusercontent.com/u/49326447?v=4'
   },
 ]
 
@@ -162,6 +162,8 @@ SKILLS = [ {
     sport: 'Hockey',
     price: 30,
     location: 'Boston',
+    address: '65 N Harvard St, Boston, MA 02163',
+    address_name: 'Bright Landry Hockey Center',
     photo: 'https://images.unsplash.com/photo-1554186285-e2bc44c34216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -170,6 +172,8 @@ SKILLS = [ {
     sport: 'Golf',
     price: 65,
     location: 'Boston',
+    address: '19 Old County Rd, Hingham, MA 02043, USA',
+    address_name: 'Boston Golf Club',
     photo: 'https://images.unsplash.com/photo-1433800881591-a31e7bff3f22?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -178,14 +182,18 @@ SKILLS = [ {
     sport: 'Yoga',
     price: 30,
     location: 'Boston',
+    address: 'Distillery Building, 516 E 2nd St, Boston, MA 02127',
+    address_name: 'Radiant Yoga Boston',
     photo: 'https://images.unsplash.com/photo-1473022082832-5a30701d4f2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
   {
     title: 'Come play basketball with me!',
-    description: 'Hey there! I\'ve love playing \'ball! I\'ll turn you into the next Uncle Drew!',
+    description: 'Hey there! I love playing \'ball! I\'ll turn you into the next Uncle Drew! ',
     sport: 'Basketball',
     price: 45,
     location: 'Boston',
+    address: '360 Huntington Ave, Boston, MA 02115',
+    address_name: 'Solomon Court',
     photo: 'https://images.unsplash.com/photo-1525916192735-22142b82d37a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -194,6 +202,8 @@ SKILLS = [ {
     sport: 'Rock climbing',
     price: 70,
     location: 'Denver',
+    address: '3300 W Florida Ave #75, Denver, CO 80219',
+    address_name: 'Denver Climbing Company',
     photo: 'https://images.unsplash.com/photo-1480970653448-02835da67676?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -202,6 +212,8 @@ SKILLS = [ {
     sport: 'Rock climbing',
     price: 75,
     location: 'Denver',
+    address: '3300 W Florida Ave #75, Denver, CO 80219',
+    address_name: 'Denver Climbing Company',
     photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1386&q=80'
   },
   {
@@ -210,6 +222,8 @@ SKILLS = [ {
     sport: 'Skiing',
     price: 55,
     location: 'Denver',
+    address: '19285 CO-103, Idaho Springs, CO 80452',
+    address_name: 'Echo Mountain Ski Resort',
     photo: 'https://images.unsplash.com/photo-1517660895948-131a6d6c55d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1786&q=80'
   },
   {
@@ -218,6 +232,8 @@ SKILLS = [ {
     sport: 'Snowboarding',
     price: 85,
     location: 'Denver',
+    address: '19285 CO-103, Idaho Springs, CO 80452',
+    address_name: 'Echo Mountain Ski Resort',
     photo: 'https://images.unsplash.com/photo-1523287409476-a9e70a25af3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -226,7 +242,9 @@ SKILLS = [ {
     sport: 'Swimming',
     price: 35,
     location: 'San Diego',
-    photo: 'https://images.unsplash.com/photo-1438029071396-1e831a7fa6d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2584&q=80'
+    address: '9550 Carmel Mountain Rd, San Diego, CA 92129',
+    address_name: 'San Diego Swim School',
+    photo: 'https://images.unsplash.com/photo-1519315901367-f34ff9154487?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
     },
   {
     title: 'Affordable surfing lessons!',
@@ -234,6 +252,8 @@ SKILLS = [ {
     sport: 'Surfing',
     price: 25,
     location: 'San Diego',
+    address: '4850 Cass St, San Diego, CA 92109',
+    address_name: 'San Diego Surf School',
     photo: 'https://images.unsplash.com/photo-1466916932233-c1b9c82e71c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -242,6 +262,8 @@ SKILLS = [ {
     sport: 'Yoga',
     price: 20,
     location: 'San Diego',
+    address: '302 Island Ave #101, San Diego, CA 92101',
+    address_name: 'Pure Vida Yoga',
     photo: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1588&q=80'
   },
   {
@@ -250,6 +272,8 @@ SKILLS = [ {
     sport: 'Cycling',
     price: 15,
     location: 'San Diego',
+    address: '1 Father Junipero Serra Trail, San Diego, CA 92119',
+    address_name: 'Mission Trails Regional Park',
     photo: 'https://images.unsplash.com/photo-1534787238916-9ba6764efd4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80'
   },
   {
@@ -258,6 +282,8 @@ SKILLS = [ {
     sport: 'Lacrosse',
     price: 25,
     location: 'New York City',
+    address: '145 E 74th St, New York, NY 10021',
+    address_name: 'NYC Lacrosse Camps',
     photo: 'https://images.unsplash.com/photo-1526563461317-c12247aef762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1240&q=80'
   },
   {
@@ -266,6 +292,8 @@ SKILLS = [ {
     sport: 'Jiu-jitsu',
     price: 25,
     location: 'New York City',
+    address: '250 W 26th St, New York, NY 10001',
+    address_name: 'Marcelo Garcia Jiu-Jitsu Academy',
     photo: 'https://images.unsplash.com/photo-1515025617920-e1e674b5033c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1628&q=80 jiu-jitsu'
   },
   {
@@ -274,6 +302,8 @@ SKILLS = [ {
     sport: 'Soccer',
     price: 25,
     location: 'New York City',
+    address: '450 W 27th St, New York, NY 10001',
+    address_name: 'Soccer Field at Chelsea Park',
     photo: 'https://images.unsplash.com/photo-1504305754058-2f08ccd89a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
   {
@@ -282,6 +312,8 @@ SKILLS = [ {
     sport: 'Tennis',
     price: 25,
     location: 'New York City',
+    address: '450 W 43rd St, New York, NY 10036',
+    address_name: 'Manhattan Plaza Racquet Club',
     photo: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
   },
 ]
@@ -435,7 +467,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!',
+  title: 'Lo mejor instructor que tuve!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable.',
   stars: 5,
   },
@@ -485,7 +517,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!!',
+  title: 'Lo mejor instructor que tuve!!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable!',
   stars: 5,
   },
@@ -535,7 +567,7 @@ REVIEWS = [ {
   stars: 5,
   },
   {
-  title: 'Lo mejor instructor que he tuve!!!!',
+  title: 'Lo mejor instructor que tuve!!!!',
   content: 'Este instructor es el mejor. Tan bien informado y divertido también. Me divertí mucho y no puedo esperar a la próxima lección. Asegúrate de llegar temprano y calentar para que te diviertas más y te concentres en el contenido durante la clase. Altamente recomendable!!',
   stars: 5,
   }

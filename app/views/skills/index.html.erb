@@ -1,5 +1,7 @@
 <%= render 'components/banner' %>
+
 <div class="container-fluid container-wide">
+
   <div class="row mt-5 mx-1 mt-2">
     <h3>Featured Lessons</h3>
   </div>
@@ -28,56 +30,77 @@
   </div>
 
   <div class="row mt-5 mx-1 my-2">
-    <h3>Popular lessons around you</h3>
+    <h3>Popular lessons by location</h3>
+  </div>
+  <div>
+    <div class="row my-3">
+      <% @locations.each do |location_with_skill| %>
+        <div class="col-3">
+          <%= render 'components/card_portrait', location_with_skill: location_with_skill %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div id="carouselExampleControls-a" class="carousel slide" data-interval="false">
+  <!-- four_skills = @skills.group_by(&:location).map{|k, v| v.first} this returns an array of 4 objects with 4 unique locations
+
+  I just want to display those 4 objects + I'm done!
+
+
+  four_skills.map do |skill|
+    skill.location
+  end
+  this returns: ["Boston", "Denver", "San Diego", "New York City"]
+
+ -->
+
+  <!-- <div id="carouselExampleControls-a" class="carousel slide" data-interval="false">
     <div class="carousel-inner carousel-container">
       <div class="carousel-item active">
         <div class="row my-3">
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row my-3">
-          <div class="col-3">
-            <%= render 'components/card_portrait' %>
-          </div>
-          <div class="col-3">
-            <%= render 'components/card_portrait' %>
-          </div>
-          <div class="col-3">
-            <%= render 'components/card_portrait' %>
-          </div>
-          <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row my-3">
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=   %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=   %>
           </div>
           <div class="col-3">
-            <%= render 'components/card_portrait' %>
+            <%=  %>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row my-3">
+          <div class="col-3">
+            <%=   %>
+          </div>
+          <div class="col-3">
+            <%=   %>
+          </div>
+          <div class="col-3">
+            <%=   %>
+          </div>
+          <div class="col-3">
+            <%= %>
           </div>
         </div>
       </div>
@@ -90,7 +113,7 @@
       <span class="carousel-button-right">></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div> -->
 
   <div class="row mt-5 mx-1 my-2">
     <h3>Featured Instructors</h3>
