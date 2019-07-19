@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def instructor?
     !taught_skills.empty?
   end
+
+  def player?
+    taught_skills.empty?
+  end
 end
