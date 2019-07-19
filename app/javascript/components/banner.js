@@ -6,7 +6,7 @@ const loadDynamicBannerText = () => {
     typeSpeed: 150,
     loop: false,
     showCursor: false
-  });
+  })
 }
 
 export { loadDynamicBannerText };
