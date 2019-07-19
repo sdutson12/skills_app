@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="d-flex">
     <a class="navbar-brand" href="/">
-      <%= image_tag(asset_path('logo_v4.jpg'), class: "avatar") %>
+      <%= image_tag(asset_path('logo_v6.jpg'), class: "avatar") %>
     </a>
     <%= render 'components/searchbar' %>
 
@@ -31,6 +31,9 @@
         <% else %>
             <li class="nav-item">
               <%= link_to "Sign Up", new_user_registration_path, class: "nav-link text-white" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Become an instructor", new_skill_path, class: "nav-link text-white" %>
             </li>
             <li class="nav-item">
               <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>

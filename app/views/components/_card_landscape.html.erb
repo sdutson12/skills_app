@@ -10,7 +10,7 @@
         <p><%= render 'components/star_rating', stars: skill.average_stars %> <%= skill.reviews.count %> review(s)<p>
       </div>
     </div>
-    <%= cl_image_tag skill.user.photo, class: "card-trip-user avatar-bordered"%>
+    <%= cl_image_tag skill.user.photo, class: "card-trip-infos avatar-skill-card"%>
   </div>
 </div>
 <% end %>
