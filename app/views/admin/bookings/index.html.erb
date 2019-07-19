@@ -3,21 +3,20 @@
   <h3 class="my-4">Upcoming lesson requests</h3>
   <div class="mb-3">
     <% current_user.booked_skills.each do |booking| %>
-      <% unless booking.date.past?  %>
-        <%= render 'components/booking_admin', booking: booking %>
-      <% end %>
+    <% unless booking.date.past?  %>
+    <%= render 'components/booking_admin', booking: booking %>
+    <% end %>
     <% end  %>
   </div>
   <h3 class="mt-5 mb-2">Past lesson requests</h3>
   <div class="row justify-content-start mt-4">
     <% @bookings.each do |booking|  %>
       <% if booking.date.past?  %>
-        <div class="col-4 my-2">
-          <div class="card-booking" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.skill.photo %>)">
-            <%= link_to booking.skill.title, skill_path(booking.skill) %>
-          </div>
+        <div class="col-4">
+          <%= render 'components/card_landscape_booking_admin', booking: booking %>
         </div>
-      <% end  %>
-    <% end  %>
+      <% end %>
+    <% end %>
   </div>
 </div>
+
