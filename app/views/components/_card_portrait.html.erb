@@ -1,8 +1,7 @@
-<%= link_to '#' do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/flagged/photo-1558759103-d4d02c7ee13f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+<%= link_to skills_search_path, class: "card-link" do %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= skill.photo %>)">
     <div class="text-bottom-center">
-      <h4>Golf</h4>
-      <p>50 USD</p>
+      <h4><%= skill.location %></h4>
     </div>
   </div>
 <% end  %>
