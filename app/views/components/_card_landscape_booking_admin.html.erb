@@ -1,0 +1,13 @@
+<div class="card-trip">
+  <%= cl_image_tag booking.user.photo %>
+  <div class="card-trip-infos">
+    <div>
+      <p><%= booking.date %></p>
+      <h2><%= booking.skill.title %></h2>
+      <p>With <%= booking.user.first_name %></p>
+    </div>
+    <%= cl_image_tag booking.user.photo, class: "card-trip-user avatar-bordered"%>
+  </div>
+</div>
+
+
