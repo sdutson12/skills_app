@@ -3,10 +3,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   background: white;
-  padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
+  padding-right: 15px;
   a:hover {
     text-decoration: none;
     color: $dark-gray;
@@ -60,8 +60,8 @@
 }
 
 .booking-image {
-  height: 80px;
-  width: 50px;
+  height: 124px;
+  width: 90px;
   object-fit: cover;
   object-position: center;
 }

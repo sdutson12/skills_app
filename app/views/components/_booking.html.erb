@@ -1,12 +1,12 @@
 <div class="row justify-content-between">
-    <div class="notification p-3">
-      <%= cl_image_tag booking.skill.user.photo, class: "booking-image"%>
-  <div class="notification-content">
-    <p><small><%= booking.date.strftime('%b %d, %Y') %></small></p>
-    <h5 class="my-0"><%= booking.skill.title %></h5>
-    <h6 class="my-0">Location: <%= booking.skill.location.upcase %></h6>
-    <h6 class="mt-0">Instructor name: <%= booking.skill.user.first_name %> <%= booking.skill.user.last_name %></h6>
-  </div>
+  <div class="notification">
+    <%= cl_image_tag booking.skill.user.photo, class: "booking-image"%>
+    <div class="notification-content py-3">
+      <p><small><%= booking.date.strftime('%b %d, %Y') %></small></p>
+      <h5 class="my-0"><%= booking.skill.title %></h5>
+      <h6 class="my-0">Location: <%= booking.skill.location.upcase %></h6>
+      <h6 class="mt-0">Instructor name: <%= booking.skill.user.first_name %> <%= booking.skill.user.last_name %></h6>
+    </div>
   <div class="d-flex flex-row-reverse">
     <%= link_to skill_path(booking.skill), class: "notification-link" do %>
       <h6 class="btn btn-skill mx-1">View skill</h6>
