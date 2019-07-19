@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :search]
+  skip_before_action :authenticate_user!, only: [:index, :show, :search, :new]
   before_action :set_skill, only: %i[show edit update destroy]
 
   def index
