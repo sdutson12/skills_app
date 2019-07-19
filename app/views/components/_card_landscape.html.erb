@@ -6,7 +6,9 @@
       <p><%= skill.location.upcase %></p>
       <h2><%= skill.title %></h2>
       <p><%= skill.price %> USD</p>
-      <%= render 'components/star_rating', stars: skill.average_stars %>
+      <div class="row d-flex ml-0">
+        <p><%= render 'components/star_rating', stars: skill.average_stars %> <%= skill.reviews.count %> review(s)<p>
+      </div>
     </div>
     <%= cl_image_tag skill.user.photo, class: "card-trip-user avatar-bordered"%>
   </div>
