@@ -1,0 +1,67 @@
+
+.notification {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid rgb(235,235,235);
+  padding-right: 15px;
+  a:hover {
+    text-decoration: none;
+    color: $dark-gray;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+.notification .notification-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.notification-link {
+  text-decoration: none !important;
+  color: $dark-gray;
+  :hover {
+    text-decoration: none !important;
+  }
+}
+
+.notification p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.notification small {
+  color: #999999;
+  font-weight: bold;
+}
+.notification .notification-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.notification:hover .notification-actions {
+  opacity: 1;
+}
+
+.notification .notification-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.notification .notification-actions a:hover {
+  color: $dark-gray;
+  text-decoration: none;
+}
+
+.booking-image {
+  height: 124px;
+  width: 90px;
+  object-fit: cover;
+  object-position: center;
+}

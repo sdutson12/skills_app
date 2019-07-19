@@ -1,0 +1,22 @@
+<div class="container-medium" style="margin-top: 100px;">
+  <h1 class="my-3"><strong>Your Lessons</strong></h1>
+  <h3 class="my-4">Upcoming lesson requests</h3>
+  <div class="mb-3">
+    <% current_user.booked_skills.each do |booking| %>
+    <% unless booking.date.past?  %>
+    <%= render 'components/booking_admin', booking: booking %>
+    <% end %>
+    <% end  %>
+  </div>
+  <h3 class="mt-5 mb-2">Past lesson requests</h3>
+  <div class="row justify-content-start mt-4 mb-2">
+    <% current_user.booked_skills.each do |booking|  %>
+      <% if booking.date.past?  %>
+        <div class="col-4">
+          <%= render 'components/card_landscape_booking_admin', booking: booking %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

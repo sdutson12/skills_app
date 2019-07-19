@@ -1,14 +1,16 @@
-<%= link_to '#', class: "card-link" do %>
+<%= link_to skill_path(skill), class: "card-link" do %>
 <div class="card-trip">
-  <img src="https://images.unsplash.com/photo-1526718583451-e88ebf774771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80">
+  <%= cl_image_tag skill.photo %>
   <div class="card-trip-infos">
     <div>
-      <p>SAN DIEGO</p>
-      <h2>Ashtanga Yoga Step by Step</h2>
-      <p>30 USD</p>
-      <%= render 'components/star_rating' %>
+      <p><%= skill.location.upcase %></p>
+      <h2><%= skill.title %></h2>
+      <p><%= skill.price %> USD</p>
+      <div class="row d-flex ml-0">
+        <p><%= render 'components/star_rating', stars: skill.average_stars %> <%= skill.reviews.count %> review(s)<p>
+      </div>
     </div>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+    <%= cl_image_tag skill.user.photo, class: "card-trip-infos avatar-skill-card"%>
   </div>
 </div>
 <% end %>

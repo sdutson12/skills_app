@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80vh;
-  margin: 65px 0px;
+  height: 100vh;
+  margin: 10px 0px;
 }
 
 #skill-form {
   flex-grow: 1;
-  padding-right: 100px;
+  padding-right: 90px;
 }
 
 #header {
@@ -18,8 +18,8 @@
 }
 
 #skill-image {
-  height: 520px;
-  width: 400px;
+  height: 600px;
+  width: 500px;
   background-size: cover;
 }
 
@@ -36,4 +36,8 @@ margin-top: 100px;
 margin-bottom: 100px;
 display:flex;
 justify-content: center;
+}
+
+.more-padding {
+  padding: 100px 80px;
 }

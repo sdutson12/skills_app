@@ -1,16 +1,17 @@
-<div class="margin">
-  <div class="container new-skill-wrapper">
+<div class="margin shadow-sm pb-5 ml-3 mr-3 mb-5 bg-white rounded ">
+  <div class="container new-skill-wrapper mt-5 ">
     <div id="skill-form">
       <h1 id="header" class="text-left">Add a New Skill</h1>
       <div>
         <%= simple_form_for @skill do |f| %>
         <%= f.input :title, class:"form-control", placeholder: 'Violin lessons from a professional musician...' %>
         <%= f.input :description, placeholder: 'Tell us about your lessons', class:"form-control description" %>
+         <%= f.input :location, placeholder: 'Type a location', class:"form-control description" %>
         <%= f.input :sport, collection: Skill::SPORTS, placeholder: 'Upload a descriptive image', label:'Skill' %>
         <%= f.input :price, placeholder: 'Choose an hourly rate', class:"form-control" %>
         <%= f.input :photo, class:"form-control btn btn-primary" %>
         <%= f.input :photo_cache, as: :hidden, class:"form-control" %>
-        <%= f.button :submit, class:"btn btn-primary" %>
+        <%= f.button :submit, class:"btn btn-gradient" %>
         <% end %>
       </div>
     </div>

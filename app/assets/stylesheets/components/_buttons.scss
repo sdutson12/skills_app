@@ -1,7 +1,7 @@
 .btn-ghost {
   color: $dark-blue;
   border: 1px solid $dark-blue;
-  padding: 8px 24px;
+  padding: 5px 15px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
@@ -9,7 +9,26 @@
 }
 
 .btn-ghost:hover {
-  opacity: 1;
+  color: white;
+  opacity: 0.9;
+  border: 1px solid #0a1450;
+  background-color: $dark-blue;
+}
+
+.btn-skill {
+  color: #008489;
+  border: 1px solid #008489;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    color: white;
+    opacity: 0.9;
+    border: 1px solid #008489;
+    background-color: #008489;
+  }
 }
 
 .btn-flat {
@@ -20,6 +39,48 @@
   transition: background 0.3s ease;
   text-shadow: none;
   font-weight: bolder;
+}
+
+.btn-pending {
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.btn-accepted {
+  color: #008489;
+  border: 1px solid #008489;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    color: #04bbc2;
+    border: 1px solid #04bbc2;
+  }
+}
+
+
+.btn-cancelled {
+  color: $red;
+  border: 1px solid $red;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+  }
 }
 
 .btn-flat:hover {

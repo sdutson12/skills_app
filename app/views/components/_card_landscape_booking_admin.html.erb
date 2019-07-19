@@ -1,0 +1,13 @@
+<div class="card-trip mb-4">
+    <%= link_to skill_path(booking.skill) do %>
+      <%= cl_image_tag booking.skill.photo %>
+    <%end%>
+    <div class="card-trip-infos">
+      <div>
+        <p><%= booking.date.strftime('%b %d, %Y')  %></p>
+        <h2><%= booking.skill.title %></h2>
+        <p>With student <%= booking.user.first_name %></p>
+      </div>
+      <%= cl_image_tag booking.user.photo, class: "card-trip-user avatar-bordered"%>
+    </div>
+  </div>

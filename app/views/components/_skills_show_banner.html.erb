@@ -1,0 +1,4 @@
+<div class="skill-banner-image d-flex justify-content-between flex-column p-4" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @skill.photo %>);">
+  <h2 class="header-skills-show"><%= @skill.title %></h2>
+ <p class="lesson-paragraf"><%= "Learn #{@skill.sport.downcase} with #{@skill.user.first_name} in #{@skill.location}!"%></p>
+</div>

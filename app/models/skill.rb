@@ -1,6 +1,19 @@
 class Skill < ApplicationRecord
-  SPORTS = %w[soccer basketball lacrosse hockey gymnastics rock\ climbing swimming golf yoga tennis cycling surfing jiu-jitsu]
+  SPORTS = %w[Basketball Cycling Golf Gymnastics Hockey Jiu-jitsu Lacrosse Rock\ climbing Skiing Swimming Surfing Snowboarding Soccer Tennis Yoga]
   mount_uploader :photo, PhotoUploader
+
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [ :title, :description ],
+    associated_against: {
+      user: [ :first_name, :last_name]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   belongs_to :user, dependent: :destroy
   has_many :bookings, dependent: :destroy
@@ -22,5 +35,11 @@ class Skill < ApplicationRecord
     else
       0
     end
+  end
+
+  def self.unique_location
+    self.all.map do |skill|
+      skill.location
+    end.uniq
   end
 end

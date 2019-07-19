@@ -11,8 +11,8 @@
 
 .search-form-control .form-control {
   height: 3.0rem;
-  border: 1px solid #313e95;;
-  background-color: #39458f80;
+  border: 1px solid #313e95;
+  background-color: #6b79d280;
 }
 
 .search-form-control .form-control:focus {
@@ -41,3 +41,18 @@
     vertical-align: middle;
 }
 
+input[type="text"]::-webkit-input-placeholder {
+color: white !important;
+}
+
+input[type="text"]:-moz-placeholder { /* Firefox 18- */
+color: white !important;
+}
+
+input[type="text"]::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;
+}
+
+input[type="text"]:-ms-input-placeholder {
+color: white !important;
+}
