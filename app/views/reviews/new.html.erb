@@ -5,10 +5,12 @@
       <div>
         <%= simple_form_for [@booking, @review] do |f| %>
         <h4>How was your lesson? </h4>
-         <%= f.collection_radio_buttons :stars, [[1], [2], [3], [4], [5]], :first, :last, item_wrapper_tag: false, boolean_style: :inline do |b| %>
-            <%= b.radio_button + b.label {''} %>
-          <% end  %>
-
+        <%= f.input :stars, as: :hidden %>
+        <ul class="list-inline">
+        <% 5.times do |i| %>
+          <li class="list-inline-item"><i class="fas fa-star review" data-star-number="<%= i %>"></i></li>
+        <% end %>
+        </ul>
         <%= f.input :title, class: "form-control mt-5", placeholder: 'Describe your experience in a few words...' %>
         <%= f.input :content, placeholder: 'Tell future learners about what they can expect with this lesson', class:"form-control description" %>
         <%= f.button :submit, class: "btn btn-gradient" %>
