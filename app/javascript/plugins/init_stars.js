@@ -1,5 +1,5 @@
 const stars = () => {
-  const stars = document.querySelectorAll(".fa-star.review");
+  const stars = document.querySelectorAll(".fa-star.star-control");
   // HOVER BEHAVIOUR
   stars.forEach(star => {
     star.addEventListener("mouseenter", (event) => {
@@ -7,10 +7,10 @@ const stars = () => {
       let number = parseInt(event.target.dataset.starNumber, 10)
 
       for (let i = 0; i < 5; i++) {
-        stars[i].classList.remove("checked");
+        stars[i].classList.remove("review-yellow");
       }
       for (let i = 0; i <= number; i++) {
-        stars[i].classList.add("checked");
+        stars[i].classList.add("rating-yellow");
       }
       });
     })
@@ -23,14 +23,14 @@ const stars = () => {
 
       if (input.value != undefined) {
         for (let i = 0; i < 5; i++) {
-          stars[i].classList.remove("checked");
+          stars[i].classList.remove("rating-yellow");
         }
         for (let i = 0; i <= number; i++) {
-          stars[i].classList.add("checked");
+          stars[i].classList.add("rating-yellow");
         }
       } else {
         for (let i = 0; i < 5; i++) {
-          stars[i].classList.remove("checked");
+          stars[i].classList.remove("rating-yellow");
         }
       }
       });
@@ -44,10 +44,10 @@ const stars = () => {
       input.setAttribute('value', `${number + 1}`);
 
       for (let i = 0; i < 5; i++) {
-        stars[i].classList.remove("checked");
+        stars[i].classList.remove("rating-yellow");
       }
       for (let i = 0; i <= number; i++) {
-        stars[i].classList.add("checked");
+        stars[i].classList.add("rating-yellow");
       }
     });
   })
