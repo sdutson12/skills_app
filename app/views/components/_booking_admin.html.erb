@@ -1,7 +1,8 @@
+<%= link_to skill_path(booking.skill), class: "notification-link" do %>
 <div class="notification position-relative">
   <img class="avatar" src=<%= booking.user.photo %> />
   <div class="notification-content">
-    <p><small><%= booking.date %></small></p>
+    <p><small><%= booking.date.strftime('%b %d, %Y') %></small></p>
     <h5 class="my-0"><%= booking.skill.title %></h5>
     <h6 class="my-0">Location: <%= booking.skill.location.upcase %></h6>
     <h6 class="mt-0">Student name: <%= booking.user.first_name %> <%= booking.user.last_name %></h6>
@@ -14,3 +15,4 @@
     <% end %>
   </div>
 </div>
+<% end %>

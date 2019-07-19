@@ -1,11 +1,16 @@
 
 .notification {
+  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
   background: white;
   padding: 8px 16px;
   border: 1px solid rgb(235,235,235);
+  a:hover {
+    text-decoration: none;
+    color: $dark-gray;
+  }
 }
 
 .position-relative {
@@ -14,6 +19,14 @@
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
+}
+
+.notification-link {
+  text-decoration: none !important;
+  color: $dark-gray;
+  :hover {
+    text-decoration: none !important;
+  }
 }
 
 .notification p {
@@ -42,5 +55,13 @@
 }
 
 .notification .notification-actions a:hover {
-  color: #555555;
+  color: $dark-gray;
+  text-decoration: none;
+}
+
+.booking-image {
+  height: 80px;
+  width: 50px;
+  object-fit: cover;
+  object-position: center;
 }
