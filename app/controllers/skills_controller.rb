@@ -4,6 +4,7 @@ class SkillsController < ApplicationController
 
   def index
     @skills = policy_scope(Skill).all
+    @locations = @skills.group_by(&:location).map { |location, skills| [location, skills.first] }
   end
 
   def show
@@ -44,11 +45,13 @@ class SkillsController < ApplicationController
   end
 
   def search
-    if params[:skill].present? || params[:location].present?
-      search_skill = params[:skill] if params[:skill].present?
-      search_location = params[:location] if params[:location].present?
-      @skills = policy_scope(Skill).where(sport: search_skill, location: search_location)
-    elsif params[:search]
+    if params[:skill].present? && params[:location].present?
+      @skills = policy_scope(Skill).where(sport: params[:skill], location: params[:location])
+    elsif params[:skill].present?
+      @skills = policy_scope(Skill).where(sport: params[:skill])
+    elsif params[:location].present?
+      @skills = policy_scope(Skill).where(location: params[:location])
+    elsif params[:search].present?
       @skills = policy_scope(Skill).global_search(params[:search])
     end
   end
