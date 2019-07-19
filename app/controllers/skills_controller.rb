@@ -44,10 +44,13 @@ class SkillsController < ApplicationController
   end
 
   def search
-    search_skill = params[:skill] if params[:skill].present?
-    search_location = params[:location] if params[:location].present?
-
-    @skills = policy_scope(Skill).where(sport: search_skill, location: search_location)
+    if params[:skill].present? || params[:location].present?
+      search_skill = params[:skill] if params[:skill].present?
+      search_location = params[:location] if params[:location].present?
+      @skills = policy_scope(Skill).where(sport: search_skill, location: search_location)
+    elsif params[:search]
+      @skills = policy_scope(Skill).global_search(params[:search])
+    end
   end
 
   private
