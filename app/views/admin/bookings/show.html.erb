@@ -1,68 +1,64 @@
-<!-- Skill.new, you can do , but to access @skill, you need @booking.skill -->
-
 <div class="container-small">
   <div class="booking-confirmation-card">
 
-    <div class="booking-confirmation-header">
-      <h3>Your booking details</h3>
-      <img class = "booking-confirmation-image" src="<%= @booking.skill.photo %>" alt="lesson photo">
-    </div>
-    <div class="booking-status-card">
-      <% if @booking.status == 'cancelled' %>
-        <h5 class="mt-4 mb-3 text-center">Your booking has been <%= @booking.status %></h5>
-      <% elsif @booking.status == 'accepted' %>
-        <h5 class="mt-4 mb-3 text-center">You have accepted the booking <%= @booking.status %></h5>
-      <% elsif @booking.status == 'pending' %>
-        <h5 class="mt-4 mb-3 text-center">Your booking is <%= @booking.status %>. Please confirm the booking.</h5>
-      <% end %>
-    </div>
-    <div class="booking-info pt-4">
-      <div class="booking-details d-flex">
-        <i class="far fa-calendar-alt mr-3"></i>
-        <p>Date: <%= @booking.date %> </p>
-      </div>
-      <div class="booking-details d-flex">
-        <i class="far fa-clock mr-3"></i>
-        <p>Number of Hours: <%= @booking.num_of_hours %></p>
-      </div>
-      <div class="booking-details d-flex">
-        <i class="fas fa-dollar-sign mr-4"></i>
-        <p>Price: $<%= @booking.skill.price * @booking.num_of_hours %></p>
-      </div>
-    </div>
-
-    <div class="booking-instructions d-flex mt-4 align-items-center">
-      <div class="booking-instructions-image">
-        <img src="<%= asset_path('undraw_reminder_pa79.png') %>" width=100px alt="Reminders">
-      </div>
-      <div class="booking-instructions-reminder">
-        <h6><em>Reminders: </em></h6>
-        <ul>
-          <li>Your student may arrive to the lesson 10 minutes ahead of time, so please make sure that you are also ready for the lesson ahead of the scheduled time.</li>
-          <li>You will receive a reminder email 24 hours before the lesson.</li>
-          <li>Dress comfortably!</li>
-          <li>Stay hydrated! Please bring a water bottle to your lesson</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="booking-instructions mt-3 d-flex pb-3 align-items-center">
-      <div class="booking-instructions-image">
-        <img src="<%= asset_path('undraw_cancel_u1it.png') %>" width=100px alt="Cancellation">
-      </div>
-      <div class="booking-instructions-cancel">
-        <h6><em>Cancellation Policy</em></h6>
-        <ul>
-          <li>If you cancel with less than 24 hours notice, you must pay 100% of the fee.</li>
-          <li>If you cancel between 24 hours and 48 hours, you will receive a 50% refund</li>
-          <li>If you give more than 48 hours notice, you will receive a full refund. </li>
-        </ul>
-      </div>
+  <div class="booking-confirmation-header">
+    <h3>Your booking details for your lesson with <strong><%= @booking.user.first_name %>:</strong></h3>
+    <img class = "booking-confirmation-image" src="<%= @booking.skill.photo %>" alt="lesson photo">
   </div>
+  <div class="booking-info pt-4">
+    <div class="booking-details d-flex">
+      <i class="far fa-calendar-alt mr-3"></i>
+      <p>Date:<span class="m-2"><span><%= @booking.date.strftime('%b %d, %Y')%> </p>
+    </div>
+    <div class="booking-details d-flex">
+      <i class="far fa-clock mr-3"></i>
+      <p>Number of Hours:<span class="m-2"><span> <%= @booking.num_of_hours %></p>
+    </div>
+    <div class="booking-details d-flex">
+      <i class="fas fa-wallet mr-3"></i>
+      <p>Total price:<span class="m-2"><span> $<%= @booking.skill.price * @booking.num_of_hours %></p>
+    </div>
+  </div>
+  <div class="booking-status-map">
+    <img src="https://snazzy-maps-cdn.azureedge.net/assets/8097-wy.png?v=20170626083314" alt="map image">
+    <div class="booking-status-map-info">
+      <p><strong>Meeting point:</strong><span class="m-3"><span><%= @booking.skill.address_name %></p>
+      <p><strong>Address:</strong><span class="m-3"><span><%= @booking.skill.address %></p>
+    </div>
+  </div>
+  <div class="booking-instructions d-flex mt-4 align-items-center">
+    <div class="booking-instructions-image">
+      <img src="<%= asset_path('undraw_reminder_pa79.png') %>" width=80px alt="Reminders">
+    </div>
+    <div class="booking-instructions-reminder">
+      <h6><em>Reminders: </em></h6>
+      <ul>
+        <li>Arrive to your lesson 10-15 minutes before the lesson begins</li>
+        <li>You will receive a reminder email 24 hours before the lesson. Please confirm!</li>
+        <li>Make sure to send the student an email with any additional information if needed.</li>
+        <li>Make sure to send an invoice to the student after the lesson.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="booking-instructions mt-3 d-flex pb-3 align-items-center">
+    <div class="booking-instructions-image">
+      <img src="<%= asset_path('undraw_cancel_u1it.png') %>" width=80px alt="Cancellation">
+    </div>
+    <div class="booking-instructions-cancel">
+      <h6><em>Cancellation Policy</em></h6>
+      <ul>
+        <li>If the student cancels with less than 24 hours notice, the student must pay 100% of the fee.</li>
+        <li>If the student cancels 24 hours to 48 hours before the lesson, your student will receive a 50% refund</li>
+        <li>If the student gives more than 48 hours notice, the student will receive a full refund. </li>
+      </ul>
+    </div>
+  </div>
+
   </div>
   <div class="back-to-bookings">
-    <%= link_to bookings_path do %>
-      <input type="submit" value="All My Bookings" class="btn btn-gradient" style="width: 100%">
+    <%= link_to admin_bookings_path do %>
+      <input type="submit" value="All My Bookings" class="btn btn-gradient mt-4" style="width: 100%">
     <% end %>
   </div>
 </div>

@@ -1,19 +1,18 @@
-
-  <div class="card-trip my-2">
-    <%= link_to skill_path(booking.skill) do %>
-      <%= cl_image_tag booking.skill.photo %>
-    <%end%>
-    <div class="card-trip-infos">
-      <div>
-        <p><%= booking.date.strftime('%b %d, %Y')  %></p>
-        <h2><%= booking.skill.title %></h2>
-        <p>With <%= booking.skill.user.first_name %></p>
-        <div class="row d-flex ml-0">
-        <p><%= render 'components/star_rating', stars: booking.skill.average_stars %><p>
-      </div>
-      </div>
-      <%= cl_image_tag booking.skill.user.photo, class: "card-trip-user avatar-bordered"%>
-      <%= link_to "Leave a review", new_booking_review_path(booking), class: "btn btn-gradient text-booking-review" %>
+<div class="card-trip my-2">
+  <%= link_to skill_path(booking.skill) do %>
+    <%= cl_image_tag booking.skill.photo %>
+  <%end%>
+  <div class="card-trip-infos">
+    <div>
+      <p><%= booking.date.strftime('%b %d, %Y')  %></p>
+      <h2><%= booking.skill.title %></h2>
+      <p>With <%= booking.skill.user.first_name %></p>
+      <div class="row d-flex ml-0">
+      <p><%= render 'components/star_rating', stars: booking.skill.average_stars %><p>
     </div>
+    </div>
+    <%= cl_image_tag booking.skill.user.photo, class: "card-trip-user avatar-bordered"%>
+    <%= link_to "Leave a review", new_booking_review_path(booking), class: "btn btn-gradient text-booking-review" %>
   </div>
+</div>
 
