@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
     @bookings = policy_scope(Booking)
@@ -7,6 +7,13 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @skills = Skill.where.not(latitude: nil, longitude: nil)
+    @markers = @skills.map do |skill|
+      {
+        lat: skill.latitude,
+        lng: skill.longitude
+      }
+    end
     authorize @booking
   end
 
