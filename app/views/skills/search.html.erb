@@ -4,9 +4,9 @@
     <% if @skills.empty? %>
       <h3>No lessons match your search!</h3>
     <% elsif @skills.count == 1 %>
-      <h3>1 lesson near you!</h3>
+      <h3>1 lesson matches your search!</h3>
     <% else %>
-      <h3> <%= @skills.count %> lessons near you!</h3>
+      <h3> <%= @skills.count %> lessons match your search!</h3>
     <% end %>
   </div>
 
